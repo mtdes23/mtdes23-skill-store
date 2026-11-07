@@ -1,0 +1,74 @@
+[
+  {
+    "id": "video-media",
+    "name": "🎬 Video & Hậu Kỳ Điện Ảnh",
+    "slug": "video-media",
+    "badge": "119 Skills Thực Chiến",
+    "description": "Kịch bản triệu view, tự động cắt khoảng lặng, sub karaoke, chèn SFX, 169 MRT Keyword, CapCut Draft và Remotion code.",
+    "icon": "video",
+    "color": "from-red-500 to-amber-600"
+  },
+  {
+    "id": "audio-voice",
+    "name": "🎙️ Giọng Đọc AI & Âm Nhạc",
+    "slug": "audio-voice",
+    "badge": "25+ Skills Cốt Lõi",
+    "description": "VieNeu-TTS tiếng Việt 48 kHz, Zero-shot voice clone 3s, cảm xúc phi ngôn từ, tạo nhạc AI Mureka và ElevenLabs sound.",
+    "icon": "mic",
+    "color": "from-emerald-500 to-teal-700"
+  },
+  {
+    "id": "3d-vfx",
+    "name": "🧊 3D Modeling & Generative VFX",
+    "slug": "3d-vfx",
+    "badge": "30+ Skills Đồ Họa",
+    "description": "Tạo mô hình 3D Hyper3D Rodin, Meshy, in 3D, trọn bộ cẩm nang Blender Pro và hiệu ứng sinh video Kling/Pika.",
+    "icon": "box",
+    "color": "from-blue-500 to-indigo-700"
+  },
+  {
+    "id": "design-motion",
+    "name": "🎨 UI/UX & Motion Engineering",
+    "slug": "design-motion",
+    "badge": "45+ Skills Thiết Kế",
+    "description": "Trọn bộ GSAP chuyên nghiệp, triết lý chuyển động Emil Kowalski, Apple Design Guidelines, Radix UI & shadcn.",
+    "icon": "palette",
+    "color": "from-purple-500 to-pink-600"
+  },
+  {
+    "id": "agents",
+    "name": "🤖 Multi-Agent & Siêu Trợ Lý",
+    "slug": "agents",
+    "badge": "268 Chuyên Gia AI",
+    "description": "Hệ sinh thái Agency Agents 18 phòng ban, khung điều phối đa tác tử NEXUS 7 pha và tự động hóa phức tạp.",
+    "icon": "bot",
+    "color": "from-violet-600 to-purple-800"
+  },
+  {
+    "id": "security",
+    "name": "🔒 Bảo Mật & Code Audit",
+    "slug": "security",
+    "badge": "265 Skills An Ninh",
+    "description": "Rà soát lỗ hổng bảo mật, kiểm toán Smart Contract, rà quét OWASP, Pentest và an toàn đám mây AWS/GCP/Azure.",
+    "icon": "shield-check",
+    "color": "from-slate-700 to-zinc-900"
+  },
+  {
+    "id": "development",
+    "name": "💻 Phát Triển Phần Mềm & DevOps",
+    "slug": "development",
+    "badge": "540+ Skills Kỹ Thuật",
+    "description": "Kiến trúc hệ thống, TypeScript, Python, Rust, Go, Kubernetes, Docker, CI/CD, Terraform và Database Optimization.",
+    "icon": "code-2",
+    "color": "from-cyan-600 to-blue-800"
+  },
+  {
+    "id": "marketing",
+    "name": "📈 Marketing, SEO & Tăng Trưởng",
+    "slug": "marketing",
+    "badge": "149 Skills Tăng Trưởng",
+    "description": "Quy chuẩn điểm tin News Studio 1080x1080, Copywriting tâm lý học, tối ưu công cụ tìm kiếm AI (GEO/AEO) và Viral growth.",
+    "icon": "trending-up",
+    "color": "from-orange-500 to-yellow-600"
+  }
+]

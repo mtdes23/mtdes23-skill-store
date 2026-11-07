@@ -1,0 +1,267 @@
+[
+  {
+    "id": "proj-xspeedvn",
+    "name": "Hệ Thống Video Siêu Xe Chuẩn Điện Ảnh (Kênh X SPEED VN)",
+    "slug": "xspeedvn-supercar-formula",
+    "category": "video-media",
+    "badge": "Bán Chạy Nhất",
+    "rating": 5.0,
+    "reviewsCount": 128,
+    "price": 790000,
+    "originalPrice": 1490000,
+    "discount": "47%",
+    "summary": "Công thức và bộ công cụ sản xuất video ngắn tài liệu siêu xe / xe thể thao 9:16 chuẩn điện ảnh triệu view (F40 & R34 Formula), tích hợp tự động hóa đăng TikTok Studio.",
+    "description": "Gói giải pháp hoàn chỉnh từ A-Z dành cho các nhà sáng tạo nội dung xe cộ, tốc độ và công nghệ cơ khí. Kế thừa toàn bộ kịch bản 6 hồi kịch tính (Hook kỷ lục, 3-Split lịch sử, Blueprint Grid cơ khí, Blur-Bar Cockpit, Danger Motorsport, Studio Outro), hệ thống âm thanh 4 tầng chuẩn -14 LUFS, phụ đề Frosted Glass Active-Word Karaoke và bot tự động upload/lên lịch TikTok Studio.",
+    "skills": [
+      "xspeedvn-supercar-video",
+      "xspeedvn-tiktok-publisher",
+      "cut-silence",
+      "auto-subtitle",
+      "vieneu-tts-v3-turbo",
+      "sfx-thu-vien"
+    ],
+    "highlights": [
+      "Kịch bản 6 hồi F40 & R34 Formula đã được chứng minh triệu view",
+      "Safe-zone 9:16 y=1510 chống tràn và che khuất giao diện TikTok",
+      "Tự động cắt khoảng lặng và khớp giọng đọc VieNeu-TTS Ultra-HD",
+      "Công cụ tự động hóa upload và lên lịch TikTok Studio qua Selenium/CLI"
+    ],
+    "icon": "zap",
+    "color": "from-amber-500 to-red-600"
+  },
+  {
+    "id": "proj-legend-football",
+    "name": "Kênh Thể Thao & Bóng Đá Huyền Thoại Triệu View",
+    "slug": "ngoi-den-huyen-thoai-video",
+    "category": "video-media",
+    "badge": "Hot Xu Hướng",
+    "rating": 5.0,
+    "reviewsCount": 114,
+    "price": 690000,
+    "originalPrice": 1290000,
+    "discount": "46%",
+    "summary": "Quy chuẩn sản xuất video tài liệu bóng đá kịch tính chuẩn kênh Ngôi Đền Huyền Thoại với đồ họa Breaking Plate Navy và kịch bản tranh luận GOAT đỉnh cao.",
+    "description": "Bộ kỹ năng độc quyền tái hiện phong cách sản xuất của kênh bóng đá hàng đầu. Sở hữu kịch bản 6 hồi phân tầng (Shocking Hook 3s đầu, Golden Award Poster, Frosted Glass Leaderboard, Head-to-Head Scroll so kè kỷ lục, Lưới 9 ô mùa giải 3x3 Trophy Grid, Di sản bất tử Outro), kết hợp phụ đề Karaoke chữ vàng pop-in và âm thanh bình luận viên hào sảng.",
+    "skills": [
+      "ngoi-den-huyen-thoai-video",
+      "phowhisper",
+      "auto-subtitle",
+      "add-sfx",
+      "sfx-thu-vien",
+      "capcut-video-editing"
+    ],
+    "highlights": [
+      "Hệ thống đồ họa 9:16 Breaking News Plate sắc nét",
+      "Cấu trúc kịch bản kích hoạt tranh cãi văn minh & giữ chân người xem 85s",
+      "Phụ đề Karaoke chữ vàng active-word nổi bật",
+      "Âm thanh 4 tầng chuẩn BLV thể thao với tiếng reo hò sân vận động"
+    ],
+    "icon": "trophy",
+    "color": "from-blue-600 to-indigo-800"
+  },
+  {
+    "id": "proj-mrt-keyword",
+    "name": "Kho 169 Hiệu Ứng Video Đỉnh Cao 'MRT Keyword' (Phúc Anh MRT)",
+    "slug": "mrt-keyword-pack",
+    "category": "video-media",
+    "badge": "Siêu Phẩm",
+    "rating": 5.0,
+    "reviewsCount": 182,
+    "price": 990000,
+    "originalPrice": 1890000,
+    "discount": "48%",
+    "summary": "Bộ công cụ tự động hóa dựng video bằng 169 keyword hiệu ứng độc quyền, 62 mã nguồn chạy ngay, tương thích hoàn hảo Antigravity & Claude Code.",
+    "description": "Chỉ cần đưa vào 1 video người nói hoặc file giọng đọc, AI sẽ tự động nghe lời, cắt khoảng lặng, chọn hiệu ứng hợp từng câu, viết chữ cho hiệu ứng (text-behind, punch-headline, progress-bar, chat-bubble, calendar-flip...) và xuất video 9:16 sẵn sàng đăng tải.",
+    "skills": [
+      "mrtkeyword",
+      "cut-silence",
+      "auto-subtitle",
+      "sfx-thu-vien",
+      "talking-head-remotion-edit"
+    ],
+    "highlights": [
+      "169 hiệu ứng hình ảnh phân loại theo Chữ, Khung quay, Vẽ tay, Số liệu, Giao diện app",
+      "62 hiệu ứng có mã nguồn thực thi tự động ngay lập tức",
+      "Tự động tính toán vị trí tránh che mặt diễn giả",
+      "Hỗ trợ cả trường hợp chỉ có file giọng đọc trên nền màu tối giản"
+    ],
+    "icon": "sparkles",
+    "color": "from-purple-600 to-pink-600"
+  },
+  {
+    "id": "proj-remotion-suite",
+    "name": "Bộ Tự Động Hóa Dựng Video Code Remotion & Talking-Head",
+    "slug": "remotion-video-automation",
+    "category": "video-media",
+    "badge": "Lập Trình Viên",
+    "rating": 4.9,
+    "reviewsCount": 96,
+    "price": 890000,
+    "originalPrice": 1690000,
+    "discount": "47%",
+    "summary": "Quy trình biến video thô thành sản phẩm hoàn chỉnh bằng mã React/Remotion: bóc tách lời, cắt ậm ừ, nhận diện thương hiệu hiện logo và căn chỉnh micro.",
+    "description": "Giải pháp hậu kỳ lập trình bằng React. Tự động hóa bóc tách transcript từng từ bằng Faster-Whisper, cắt khoảng lặng và từ đệm, tạo Remotion composition với phụ đề karaoke mượt mà, tự hiện logo hãng khi diễn giả nhắc tên thương hiệu.",
+    "skills": [
+      "talking-head-remotion-edit",
+      "ai-tips-remotion",
+      "ai-tips-talking-head",
+      "cut-silence",
+      "face-zoom-highlight",
+      "remotion"
+    ],
+    "highlights": [
+      "Render video hàng loạt thông qua code React Remotion",
+      "Tự động bóc transcript và đo điểm cắt an toàn cho hơi thở",
+      "Tự động phóng to thu nhỏ (Face Zoom Punch-in) bám theo khuôn mặt",
+      "Tự động chèn logo SVG khi phát hiện thương hiệu trong câu nói"
+    ],
+    "icon": "code",
+    "color": "from-cyan-500 to-blue-700"
+  },
+  {
+    "id": "proj-vieneu-tts",
+    "name": "Studio Giọng Đọc AI Tiếng Việt VieNeu-TTS & Voice Clone",
+    "slug": "vieneu-voice-studio",
+    "category": "audio-voice",
+    "badge": "Độc Quyền AI",
+    "rating": 5.0,
+    "reviewsCount": 142,
+    "price": 850000,
+    "originalPrice": 1590000,
+    "discount": "46%",
+    "summary": "Bộ công cụ chuyển văn bản thành giọng nói tiếng Việt Ultra-HD 48 kHz on-device, 25 giọng 3 miền, clone giọng từ mẫu 3s và chèn cảm xúc phi ngôn từ.",
+    "description": "Kỹ năng làm chủ mô hình VieNeu-TTS v3 Turbo và Nano chạy trực tiếp bằng CPU/GPU. Tạo giọng đọc tự nhiên chuẩn 3 miền Bắc - Trung - Nam, nhân bản giọng nói tức thì (Zero-shot Voice Clone) từ đoạn ghi âm 3-8s, tích hợp cảm xúc [cười], [thở dài], [hắng giọng], server OpenAI API và lồng tiếng tự động từ file SRT.",
+    "skills": [
+      "vieneu-tts",
+      "vieneu-tts-v3-turbo",
+      "elevenlabs-voice-clone",
+      "elevenlabs-sound-effects",
+      "stable-audio-2-5-text-to-audio",
+      "speech-to-text"
+    ],
+    "highlights": [
+      "Chất lượng âm thanh 48 kHz Ultra-HD sắc nét hàng đầu tiếng Việt",
+      "Zero-shot Voice Clone chỉ cần mẫu 3-8 giây audio sạch",
+      "Chèn trực tiếp tag cảm xúc [cười], [thở dài] chân thực",
+      "Cung cấp REST API server tương thích chuẩn OpenAI Audio Speech"
+    ],
+    "icon": "mic",
+    "color": "from-emerald-500 to-teal-700"
+  },
+  {
+    "id": "proj-news-digest",
+    "name": "Báo Chí & Điểm Tin Mạng Xã Hội Đa Lĩnh Vực (News Digest Studio)",
+    "slug": "multi-topic-news-digest",
+    "category": "marketing",
+    "badge": "Viral Studio",
+    "rating": 4.9,
+    "reviewsCount": 89,
+    "price": 490000,
+    "originalPrice": 990000,
+    "discount": "50%",
+    "summary": "Dây chuyền sản xuất album ảnh điểm tin 1080x1080 Full HD chuẩn Facebook/Threads cho 8 chủ đề (Tech, Crypto, Finance, Auto, Showbiz, Sports, Gaming, Life).",
+    "description": "Kế thừa quy chuẩn từ J2TEAM News Studio. Bao gồm thuật toán cân bằng dòng chống rớt chữ (chống orphan word), ruy băng nhận diện thương hiệu 45°, bộ lọc làm nét vi mô Unsharp Mask, cùng văn phong báo chí hiện đại sắc sảo.",
+    "skills": [
+      "multi-topic-news-digest",
+      "open-design",
+      "banner-design",
+      "auto-subtitle",
+      "slides"
+    ],
+    "highlights": [
+      "Khung đồ họa 1080x1080 tỉ lệ vàng thu hút tương tác mạng xã hội",
+      "8 preset chuyên mục với bảng mã màu và nguồn tin RSS uy tín",
+      "Thuật toán chống rớt chữ và khóa cụm số + đơn vị đi liền nhau",
+      "Quy chuẩn caption phân tầng giữ chân người đọc"
+    ],
+    "icon": "newspaper",
+    "color": "from-orange-500 to-rose-600"
+  },
+  {
+    "id": "proj-agency-agents",
+    "name": "Siêu Cơ Quan Đa Tác Tử Agency Agents (268 Chuyên Gia AI)",
+    "slug": "agency-agents-nexus",
+    "category": "agents",
+    "badge": "Enterprise AI",
+    "rating": 5.0,
+    "reviewsCount": 204,
+    "price": 1290000,
+    "originalPrice": 2490000,
+    "discount": "48%",
+    "summary": "Kho 268 chuyên gia AI thực chiến phân bổ qua 18 phòng ban cùng khung điều phối đa tác tử NEXUS 7 pha tự động hóa toàn diện doanh nghiệp.",
+    "description": "Biến Antigravity thành một Agency toàn năng với 66 kỹ sư công nghệ, 37 chuyên gia Marketing, 12 chuyên gia Bảo mật, 10 nhà thiết kế UI/UX, 9 chuyên gia kiểm thử chống ảo tưởng nghiệm thu... Hoạt động theo quy trình khép kín Dev+QA loops.",
+    "skills": [
+      "agency-agents",
+      "multi-agent-architect",
+      "multi-agent-patterns"
+    ],
+    "highlights": [
+      "268 Persona chuyên biệt với nhiệm vụ, bộ công cụ và KPI đo lường riêng",
+      "18 phòng ban phủ trọn vẹn mọi mắt xích vận hành doanh nghiệp công nghệ",
+      "Khung điều phối NEXUS 7 pha từ khám phá, kiến trúc đến kiểm thử",
+      "Cơ chế Reality Checker khắc tinh của ảo tưởng nghiệm thu"
+    ],
+    "icon": "users",
+    "color": "from-violet-600 to-indigo-900"
+  },
+  {
+    "id": "proj-3d-vfx",
+    "name": "Vũ Trụ 3D AI & Kỹ Xảo Điện Ảnh Tương Tác",
+    "slug": "3d-ai-vfx-universe",
+    "category": "3d-vfx",
+    "badge": "Công Nghệ Đỉnh Cao",
+    "rating": 4.9,
+    "reviewsCount": 77,
+    "price": 990000,
+    "originalPrice": 1990000,
+    "discount": "50%",
+    "summary": "Bộ kỹ năng tạo mô hình 3D từ ảnh/văn bản (Hyper3D Rodin, Meshy, Tripo), trọn bộ Blender Pro Toolkit và các mô hình sinh video kỹ xảo Kling, Pika, PixVerse.",
+    "description": "Giải pháp toàn năng cho 3D Artist và Video Creator. Tự động hóa tạo 3D mesh, texture PBR, auto-rigging nhân vật, chuẩn bị file in 3D thực tế, phối hợp cùng các bộ hiệu ứng video AI chuyển động mạnh mẽ.",
+    "skills": [
+      "rodin3d-skill",
+      "meshy-3d-generation",
+      "meshy-3d-printing",
+      "blender-3d",
+      "blender-toolkit",
+      "kling-v1-6-pro-effects",
+      "pixverse-v4-5-effect"
+    ],
+    "highlights": [
+      "Tạo model 3D chuẩn game/điện ảnh từ ảnh 2D qua Hyper3D Rodin Gen-2.5",
+      "Tự động tối ưu hóa lưới (retopology) và xuất file in 3D STL/OBJ",
+      "Bộ cẩm nang Blender geometry nodes, shader materials và cinematic render",
+      "Tích hợp các hiệu ứng bùng nổ, tan biến, biến đổi hình dạng bằng Kling và Pika"
+    ],
+    "icon": "box",
+    "color": "from-blue-500 to-emerald-600"
+  },
+  {
+    "id": "proj-master-all",
+    "name": "Master Vault: Trọn Bộ 2,821 Kỹ Năng Antigravity & Claude Toàn Cầu",
+    "slug": "master-vault-all-skills",
+    "category": "all",
+    "badge": "Trọn Đời VIP",
+    "rating": 5.0,
+    "reviewsCount": 350,
+    "price": 2990000,
+    "originalPrice": 9900000,
+    "discount": "70%",
+    "summary": "Sở hữu vĩnh viễn toàn bộ kho vũ khí 2,821 kỹ năng: 119 skills media thực chiến Việt Nam + 2,702 skills bảo mật, lập trình, đám mây, marketing quốc tế.",
+    "description": "Gói cao cấp nhất dành cho Agency, lập trình viên chuyên nghiệp và Content Creator muốn trang bị vũ khí tối thượng cho AI. Bao gồm toàn bộ script tự động hóa, thư viện 585 âm thanh bản quyền, công cụ dựng video, model TTS, 268 chuyên gia Agency và cập nhật trọn đời.",
+    "skills": [
+      "Tất cả 119 Skills Media Thực Chiến",
+      "Tất cả 2,702 Skills Claude & Antigravity Quốc Tế",
+      "Thư viện 585 Âm Thanh Bản Quyền 5 Sao",
+      "Kho 169 Hiệu Ứng MRT Keyword",
+      "268 Chuyên Gia Đa Tác Tử Agency Agents"
+    ],
+    "highlights": [
+      "Cài đặt 1-click kích hoạt trực tiếp vào Antigravity IDE",
+      "Bao gồm toàn bộ mã nguồn Python, Node.js, Shell script, âm thanh WAV/MP3",
+      "Nhận cập nhật kỹ năng mới vĩnh viễn không phụ phí",
+      "Hỗ trợ kỹ thuật 1-1 cài đặt và tinh chỉnh workflow"
+    ],
+    "icon": "crown",
+    "color": "from-yellow-500 via-amber-600 to-red-600"
+  }
+]
