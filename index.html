@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SKILLVAULT AI — Chợ Kỹ Năng & Giải Pháp Tự Động Hóa Cho AI Agent</title>
+  <title>SKILLVAULT AI — Antigravity & Claude Skill Store</title>
   
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -14,50 +14,54 @@
   <!-- Canvas Confetti CDN -->
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
 
-  <!-- Google Fonts: Plus Jakarta Sans & Space Grotesk -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-            mono: ['"Space Grotesk"', 'monospace']
-          },
-          colors: {
-            brand: {
-              400: '#fbbf24',
-              500: '#f59e0b',
-              600: '#d97706',
-            }
-          }
-        }
-      }
-    }
-  </script>
-
   <style>
-    /* Custom Scrollbar */
-    ::-webkit-scrollbar { width: 7px; height: 7px; }
-    ::-webkit-scrollbar-track { background: #070a12; }
-    ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 4px; }
-    ::-webkit-scrollbar-thumb:hover { background: #334155; }
-
-    .glass-nav {
-      background: rgba(7, 10, 18, 0.82);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    /* Apple SF Pro Platform System Typography */
+    :root {
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", "Segoe UI", Roboto, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
 
-    .hero-glow {
-      background: radial-gradient(ellipse 70% 50% at 50% -10%, rgba(245, 158, 11, 0.18) 0%, rgba(217, 119, 6, 0.05) 50%, transparent 80%);
+    /* Custom Scrollbar - Apple Minimalist */
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: #000000; }
+    ::-webkit-scrollbar-thumb { background: #2c2c2e; border-radius: 9999px; }
+    ::-webkit-scrollbar-thumb:hover { background: #3a3a3c; }
+
+    /* Apple Frosted Glass Navbar */
+    .apple-nav {
+      background: rgba(0, 0, 0, 0.8);
+      backdrop-filter: saturate(180%) blur(20px);
+      -webkit-backdrop-filter: saturate(180%) blur(20px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
     }
 
+    /* Apple Card Surface */
+    .apple-card {
+      background-color: #161617;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 28px;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .apple-card:hover {
+      border-color: rgba(255, 255, 255, 0.22);
+      transform: translateY(-2px);
+    }
+
+    /* Apple Button Press Response (Fluid physical response) */
+    .apple-btn:active {
+      transform: scale(0.97);
+      transition: transform 100ms ease-out;
+    }
+
+    /* Apple Text Gradient Shimmer */
+    .apple-headline {
+      background: linear-gradient(180deg, #FFFFFF 0%, #A1A1A6 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Laser Scanner for VietQR */
     @keyframes scan {
       0% { top: 0%; opacity: 0.8; }
       50% { top: 96%; opacity: 1; }
@@ -68,11 +72,12 @@
       left: 0;
       right: 0;
       height: 2px;
-      background: linear-gradient(90deg, transparent, #f59e0b, transparent);
-      box-shadow: 0 0 14px #f59e0b;
-      animation: scan 2.4s infinite ease-in-out;
+      background: linear-gradient(90deg, transparent, #0071e3, transparent);
+      box-shadow: 0 0 12px #0071e3;
+      animation: scan 2.2s infinite ease-in-out;
     }
 
+    /* Blinking Terminal Cursor */
     @keyframes cursorBlink {
       0%, 100% { opacity: 1; }
       50% { opacity: 0; }
@@ -81,336 +86,279 @@
       display: inline-block;
       width: 7px;
       height: 14px;
-      background: #f59e0b;
+      background: #2997ff;
       vertical-align: middle;
       animation: cursorBlink 1s infinite;
     }
   </style>
 </head>
 
-<body class="bg-[#070a12] text-slate-100 min-h-screen font-sans selection:bg-amber-500 selection:text-slate-950">
+<body class="bg-black text-[#f5f5f7] min-h-screen selection:bg-[#0071e3] selection:text-white">
 
-  <!-- TOP PROMO BAR -->
-  <div class="bg-gradient-to-r from-amber-600 via-orange-600 to-amber-600 text-slate-950 font-bold text-xs py-2 px-4 text-center flex items-center justify-center gap-2 shadow-inner">
-    <i data-lucide="zap" class="w-4 h-4 fill-slate-950"></i>
-    <span>KHO VŨ KHÍ 2,821+ SKILLS CHO ANTIGRAVITY & CLAUDE CODE — QUÉT VIETQR MỞ KHÓA TỨC THÌ!</span>
-    <span class="hidden md:inline-block bg-slate-950 text-amber-400 px-2.5 py-0.5 rounded text-[10px] ml-2 uppercase font-black">GIẢM ĐẾN 70% HÔM NAY</span>
+  <!-- TOP APPLE SUB-NAV / RIBBON -->
+  <div class="bg-[#1d1d1f] text-[#86868b] text-[12px] py-2.5 px-4 text-center font-normal flex items-center justify-center gap-2 border-b border-white/[0.08]">
+    <span>Trải nghiệm 2,821 kỹ năng AI đẳng cấp cho Antigravity & Claude Code.</span>
+    <a href="#projects-view" onclick="setTab('projects')" class="text-[#2997ff] hover:underline flex items-center gap-0.5">
+      Khám phá ngay <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+    </a>
   </div>
 
-  <!-- STICKY NAVBAR -->
-  <header class="sticky top-0 z-40 glass-nav">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+  <!-- APPLE FROSTED GLASS NAVIGATION -->
+  <header class="sticky top-0 z-40 apple-nav">
+    <div class="max-w-[1024px] mx-auto px-4 h-14 flex items-center justify-between gap-4">
       
-      <!-- Logo -->
-      <div class="flex items-center gap-3 cursor-pointer select-none" onclick="setTab('projects')">
-        <div class="w-11 h-11 rounded-2xl bg-gradient-to-br from-amber-400 to-orange-600 flex items-center justify-center text-slate-950 font-black shadow-lg shadow-amber-500/25">
-          <i data-lucide="box" class="w-6 h-6"></i>
-        </div>
-        <div>
-          <div class="flex items-center gap-2">
-            <span class="text-xl font-black tracking-tight text-white font-mono">SKILLVAULT<span class="text-amber-400">.AI</span></span>
-            <span class="px-2 py-0.5 rounded-full text-[10px] font-black bg-amber-500/15 text-amber-400 border border-amber-500/30">PRO</span>
-          </div>
-          <p class="text-[11px] text-slate-400 tracking-wider">Antigravity & Claude Skill Store</p>
-        </div>
+      <!-- Apple Logo / Brand -->
+      <div class="flex items-center gap-2 cursor-pointer select-none" onclick="setTab('projects')">
+        <i data-lucide="cpu" class="w-5 h-5 text-white"></i>
+        <span class="text-sm font-semibold tracking-tight text-white font-mono">SkillVault</span>
       </div>
 
-      <!-- Desktop Nav Tabs -->
-      <nav class="hidden lg:flex items-center gap-1.5 bg-slate-950/80 p-1.5 rounded-2xl border border-slate-800/80">
-        <button data-nav-tab="projects" class="flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-xs transition-all duration-200 bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 shadow-lg shadow-amber-500/25">
-          <i data-lucide="rocket" class="w-4 h-4"></i> Theo Dự Án
-        </button>
-        <button data-nav-tab="categories" class="flex items-center gap-2 px-5 py-2.5 rounded-xl font-medium text-xs transition-all duration-200 text-slate-400 hover:text-white hover:bg-slate-800/60">
-          <i data-lucide="layout-grid" class="w-4 h-4"></i> Theo Từng Mục
-        </button>
-        <button data-nav-tab="skills" class="flex items-center gap-2 px-5 py-2.5 rounded-xl font-medium text-xs transition-all duration-200 text-slate-400 hover:text-white hover:bg-slate-800/60">
-          <i data-lucide="layers" class="w-4 h-4"></i> Kỹ Năng Lẻ (2,800+)
-        </button>
-        <button data-nav-tab="guide" class="flex items-center gap-2 px-5 py-2.5 rounded-xl font-medium text-xs transition-all duration-200 text-slate-400 hover:text-white hover:bg-slate-800/60">
-          <i data-lucide="book-open" class="w-4 h-4"></i> Hướng Dẫn Cài
-        </button>
+      <!-- Center Minimalist Nav Links -->
+      <nav class="hidden md:flex items-center gap-7 text-xs font-normal text-[#d2d2d7]">
+        <button data-nav-tab="projects" class="text-white hover:text-white transition font-medium">Theo Dự Án</button>
+        <button data-nav-tab="categories" class="hover:text-white transition text-[#86868b]">Chuyên Mục</button>
+        <button data-nav-tab="skills" class="hover:text-white transition text-[#86868b]">Kỹ Năng Lẻ</button>
+        <button data-nav-tab="guide" class="hover:text-white transition text-[#86868b]">Cài Đặt</button>
       </nav>
 
       <!-- Right Utility Actions -->
-      <div class="flex items-center gap-2.5">
+      <div class="flex items-center gap-4 text-[#d2d2d7]">
         
-        <!-- Search bar with Cmd+K hint -->
-        <div class="relative hidden sm:block w-48 md:w-64">
-          <i data-lucide="search" class="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400"></i>
+        <!-- Search bar with Cmd+K -->
+        <div class="relative hidden sm:block w-44">
+          <i data-lucide="search" class="w-3.5 h-3.5 absolute left-3 top-1/2 -translate-y-1/2 text-[#86868b]"></i>
           <input 
             type="text" 
             id="global-search" 
-            placeholder="Tìm kỹ năng, dự án..." 
-            class="w-full bg-slate-950 border border-slate-800 focus:border-amber-500 rounded-xl pl-9 pr-14 py-2 text-xs text-slate-200 placeholder-slate-500 focus:outline-none transition font-sans"
+            placeholder="Tìm kiếm..." 
+            class="w-full bg-[#1d1d1f] border border-white/[0.08] focus:border-[#2997ff] rounded-full pl-8 pr-10 py-1 text-xs text-white placeholder-[#86868b] focus:outline-none transition"
           >
-          <span class="absolute right-2.5 top-1/2 -translate-y-1/2 px-1.5 py-0.5 rounded text-[10px] font-mono text-slate-500 bg-slate-900 border border-slate-800">⌘K</span>
+          <span class="absolute right-2.5 top-1/2 -translate-y-1/2 text-[10px] text-[#86868b] font-mono">⌘K</span>
         </div>
 
-        <!-- Sound Feedback Toggle -->
-        <button 
-          id="sound-toggle-btn" 
-          title="Bật/Tắt âm thanh hiệu ứng" 
-          class="p-2.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-amber-500/50 text-amber-400 transition"
-        >
+        <!-- Sound Feedback -->
+        <button id="sound-toggle-btn" title="Âm thanh phản hồi" class="p-1.5 rounded-full hover:bg-white/10 transition">
           <i data-lucide="volume-2" class="w-4 h-4"></i>
         </button>
 
-        <!-- Bank Settings Button (Seller Admin) -->
-        <button 
-          id="bank-settings-btn" 
-          title="Cấu hình tài khoản ngân hàng nhận tiền QR" 
-          class="p-2.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-amber-500/50 text-slate-400 hover:text-amber-400 transition"
-        >
-          <i data-lucide="settings-2" class="w-4 h-4"></i>
+        <!-- Bank Settings -->
+        <button id="bank-settings-btn" title="Cấu hình tài khoản ngân hàng QR" class="p-1.5 rounded-full hover:bg-white/10 transition">
+          <i data-lucide="settings" class="w-4 h-4"></i>
         </button>
 
-        <!-- Slide-Over Cart Trigger -->
-        <button 
-          id="cart-btn" 
-          class="relative flex items-center gap-2 px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-amber-500/50 text-slate-200 hover:text-white transition font-medium text-xs shadow-md"
-        >
-          <i data-lucide="shopping-bag" class="w-4 h-4 text-amber-400"></i>
-          <span class="hidden sm:inline font-bold">Giỏ Hàng</span>
-          <span id="cart-badge" class="hidden px-2 py-0.5 rounded-full bg-amber-500 text-slate-950 font-black text-[10px]">0</span>
+        <!-- Cart Bag -->
+        <button id="cart-btn" class="relative p-1.5 rounded-full hover:bg-white/10 transition">
+          <i data-lucide="shopping-bag" class="w-4 h-4 text-white"></i>
+          <span id="cart-badge" class="hidden absolute -top-1 -right-1 px-1.5 py-0.2 rounded-full bg-[#0071e3] text-white font-bold text-[9px]">0</span>
         </button>
 
       </div>
     </div>
 
-    <!-- Mobile Navigation Bar -->
-    <div class="lg:hidden flex items-center justify-around border-t border-slate-800 py-2.5 px-3 bg-slate-950/95 text-xs font-semibold">
-      <button data-nav-tab="projects" class="flex flex-col items-center gap-1 text-amber-400">
-        <i data-lucide="rocket" class="w-4 h-4"></i> Dự Án
-      </button>
-      <button data-nav-tab="categories" class="flex flex-col items-center gap-1 text-slate-400">
-        <i data-lucide="layout-grid" class="w-4 h-4"></i> Từng Mục
-      </button>
-      <button data-nav-tab="skills" class="flex flex-col items-center gap-1 text-slate-400">
-        <i data-lucide="layers" class="w-4 h-4"></i> Kỹ Năng
-      </button>
-      <button data-nav-tab="guide" class="flex flex-col items-center gap-1 text-slate-400">
-        <i data-lucide="book-open" class="w-4 h-4"></i> Cài Đặt
-      </button>
+    <!-- Mobile Sub-Navigation -->
+    <div class="md:hidden flex items-center justify-around border-t border-white/[0.08] py-2 px-3 bg-black text-xs text-[#86868b]">
+      <button data-nav-tab="projects" class="hover:text-white">Dự Án</button>
+      <button data-nav-tab="categories" class="hover:text-white">Chuyên Mục</button>
+      <button data-nav-tab="skills" class="hover:text-white">Kỹ Năng</button>
+      <button data-nav-tab="guide" class="hover:text-white">Cài Đặt</button>
     </div>
   </header>
 
-  <!-- HERO SECTION WITH LIVE INTERACTIVE AI TERMINAL -->
-  <section class="relative overflow-hidden hero-glow pt-10 pb-16 border-b border-slate-800/80">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <!-- ============================================================== -->
+  <!-- HERO SECTION: APPLE PRODUCT ANNOUNCEMENT STYLE                  -->
+  <!-- ============================================================== -->
+  <section class="relative pt-16 pb-20 overflow-hidden text-center">
+    <div class="max-w-[1024px] mx-auto px-4 sm:px-6">
       
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+      <!-- Eyebrow Tag -->
+      <span class="text-xs font-semibold uppercase tracking-[0.08em] text-[#86868b] block mb-3">
+        Antigravity Skills Studio
+      </span>
+
+      <!-- Massive Apple Display Headline -->
+      <h1 class="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.06] mb-4 apple-headline">
+        Sức mạnh vượt trội.<br>Trí tuệ nhân tạo đỉnh cao.
+      </h1>
+
+      <p class="text-lg sm:text-xl text-[#86868b] max-w-2xl mx-auto font-normal leading-relaxed mb-8">
+        Hệ sinh thái 2,821 kỹ năng chuẩn hóa cho Antigravity & Claude Code. Từ kịch bản video triệu view đến giọng đọc 48 kHz và 268 chuyên gia Agency.
+      </p>
+
+      <!-- Apple Action CTAs -->
+      <div class="flex items-center justify-center gap-4 mb-14">
+        <a href="#projects-view" onclick="setTab('projects')" class="apple-btn px-6 py-2.5 rounded-full bg-[#0071e3] hover:bg-[#0077ed] text-white text-sm font-medium transition shadow-sm">
+          Khám phá các gói dự án
+        </a>
+        <a href="#guide-view" onclick="setTab('guide')" class="text-[#2997ff] hover:underline flex items-center gap-1 text-sm font-medium">
+          Tìm hiểu cách cài đặt <i data-lucide="chevron-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+
+      <!-- Quick Search Filter Pills -->
+      <div class="flex flex-wrap items-center justify-center gap-2 max-w-xl mx-auto mb-16 text-xs">
+        <span class="text-[#86868b] mr-1">Tìm nhanh:</span>
+        <button data-quick-search="xspeedvn" class="px-3 py-1 rounded-full bg-[#1d1d1f] hover:bg-[#2c2c2e] text-[#d2d2d7] border border-white/[0.06] transition">Siêu Xe X SPEED</button>
+        <button data-quick-search="ngoi-den-huyen-thoai" class="px-3 py-1 rounded-full bg-[#1d1d1f] hover:bg-[#2c2c2e] text-[#d2d2d7] border border-white/[0.06] transition">Ngôi Đền Huyền Thoại</button>
+        <button data-quick-search="vieneu" class="px-3 py-1 rounded-full bg-[#1d1d1f] hover:bg-[#2c2c2e] text-[#d2d2d7] border border-white/[0.06] transition">VieNeu Voice 48k</button>
+        <button data-quick-search="mrtkeyword" class="px-3 py-1 rounded-full bg-[#1d1d1f] hover:bg-[#2c2c2e] text-[#d2d2d7] border border-white/[0.06] transition">169 MRT Keyword</button>
+      </div>
+
+      <!-- MACOS SEQUOIA / VISION PRO GLASS TERMINAL -->
+      <div class="max-w-3xl mx-auto rounded-[24px] bg-[#161617] border border-white/[0.12] shadow-2xl overflow-hidden text-left">
         
-        <!-- Left Column: Headline & Value Proposition -->
-        <div class="lg:col-span-7 text-center lg:text-left space-y-5">
-          
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900 border border-slate-800 text-amber-400 text-xs font-bold shadow-md">
-            <span class="flex h-2 w-2 rounded-full bg-amber-400 animate-ping"></span>
-            <span>Kho Vũ Khí Kỹ Năng Đỉnh Cao Cho Antigravity & Claude Code</span>
+        <div class="flex items-center justify-between px-4 py-3 bg-[#1d1d1f] border-b border-white/[0.06]">
+          <div class="flex items-center gap-2">
+            <span class="w-3 h-3 rounded-full bg-[#ff5f56]"></span>
+            <span class="w-3 h-3 rounded-full bg-[#ffbd2e]"></span>
+            <span class="w-3 h-3 rounded-full bg-[#27c93f]"></span>
           </div>
-
-          <h1 class="text-3xl sm:text-5xl font-black text-white tracking-tight leading-[1.12]">
-            Nâng Cấp Trợ Lý AI Thành <br class="hidden sm:inline">
-            <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-400 to-amber-200">
-              Đạo Diễn & Chuyên Gia Thực Chiến
-            </span>
-          </h1>
-
-          <p class="text-sm sm:text-base text-slate-300 font-light leading-relaxed max-w-2xl">
-            Sở hữu ngay các công thức video triệu view (X SPEED VN, Ngôi Đền Huyền Thoại), 169 hiệu ứng MRT Keyword, giọng đọc VieNeu-TTS 48kHz và 268 chuyên gia Agency. Thanh toán tự động qua mã VietQR.
-          </p>
-
-          <!-- Quick Filters Pills -->
-          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-2 pt-1 text-xs">
-            <span class="text-slate-500 font-semibold mr-1">Từ khóa hot:</span>
-            <button data-quick-search="xspeedvn" class="px-3 py-1 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-amber-400 border border-slate-800 transition">🏎️ Siêu Xe X SPEED</button>
-            <button data-quick-search="ngoi-den-huyen-thoai" class="px-3 py-1 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-amber-400 border border-slate-800 transition">⚽ Ngôi Đền Huyền Thoại</button>
-            <button data-quick-search="vieneu" class="px-3 py-1 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-amber-400 border border-slate-800 transition">🎙️ VieNeu Voice Clone</button>
-            <button data-quick-search="mrtkeyword" class="px-3 py-1 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-amber-400 border border-slate-800 transition">⚡ 169 MRT Keyword</button>
-          </div>
-
-          <!-- Trust & Platform Badges -->
-          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-3 text-xs text-slate-400 font-medium">
-            <div class="flex items-center gap-1.5 text-emerald-400">
-              <i data-lucide="shield-check" class="w-4 h-4"></i> 100% Verified Safe
-            </div>
-            <div class="flex items-center gap-1.5 text-amber-400">
-              <i data-lucide="qr-code" class="w-4 h-4"></i> Quét VietQR Mọi Ngân Hàng
-            </div>
-            <div class="flex items-center gap-1.5 text-slate-300">
-              <i data-lucide="download" class="w-4 h-4"></i> Nhận Link Tải Tức Thì
-            </div>
-          </div>
-
+          <span class="text-xs font-mono text-[#86868b]">Antigravity Terminal — 60 fps</span>
+          <span class="text-[10px] font-mono text-[#2997ff] bg-[#0071e3]/10 px-2 py-0.5 rounded-full">ACTIVE</span>
         </div>
 
-        <!-- Right Column: Interactive AI Terminal Window -->
-        <div class="lg:col-span-5">
-          <div class="rounded-3xl bg-slate-950 border border-slate-800 shadow-2xl overflow-hidden">
-            
-            <!-- Mac Terminal Header -->
-            <div class="flex items-center justify-between px-4 py-3 bg-slate-900/90 border-b border-slate-800">
-              <div class="flex items-center gap-2">
-                <span class="w-3 h-3 rounded-full bg-red-500/80"></span>
-                <span class="w-3 h-3 rounded-full bg-yellow-500/80"></span>
-                <span class="w-3 h-3 rounded-full bg-emerald-500/80"></span>
-              </div>
-              <span class="text-[11px] font-mono text-slate-400">Antigravity Execution Engine</span>
-              <span class="text-[10px] font-mono text-emerald-400 bg-emerald-950 px-2 py-0.5 rounded border border-emerald-800/40">ONLINE</span>
-            </div>
+        <div class="flex items-center gap-2 px-4 py-2 bg-black/40 border-b border-white/[0.04] overflow-x-auto">
+          <button data-terminal-tab="xspeedvn" class="px-3 py-1 text-xs font-semibold rounded-full bg-white/10 text-white backdrop-blur shrink-0">Siêu Xe X SPEED</button>
+          <button data-terminal-tab="vieneu" class="px-3 py-1 text-xs font-medium rounded-full text-[#86868b] hover:text-white transition shrink-0">VieNeu 48kHz</button>
+          <button data-terminal-tab="mrtkeyword" class="px-3 py-1 text-xs font-medium rounded-full text-[#86868b] hover:text-white transition shrink-0">169 MRT Keyword</button>
+          <button data-terminal-tab="agency" class="px-3 py-1 text-xs font-medium rounded-full text-[#86868b] hover:text-white transition shrink-0">Agency Agents</button>
+        </div>
 
-            <!-- Preset Switchers -->
-            <div class="flex items-center gap-1.5 px-4 py-2 bg-slate-900/40 border-b border-slate-800/70 overflow-x-auto">
-              <button data-terminal-tab="xspeedvn" class="px-2.5 py-1 text-[11px] font-bold rounded-lg bg-amber-500/10 text-amber-400 border border-amber-500/30 shrink-0">Siêu Xe X SPEED</button>
-              <button data-terminal-tab="vieneu" class="px-2.5 py-1 text-[11px] font-semibold rounded-lg text-slate-400 hover:text-white transition shrink-0">VieNeu 48kHz</button>
-              <button data-terminal-tab="mrtkeyword" class="px-2.5 py-1 text-[11px] font-semibold rounded-lg text-slate-400 hover:text-white transition shrink-0">169 MRT Keyword</button>
-              <button data-terminal-tab="agency" class="px-2.5 py-1 text-[11px] font-semibold rounded-lg text-slate-400 hover:text-white transition shrink-0">Agency Agents</button>
-            </div>
-
-            <!-- Terminal Content Body -->
-            <div class="p-5 font-mono text-xs space-y-2.5 min-h-[220px]">
-              <div class="text-slate-400 flex items-center gap-2">
-                <span class="text-amber-400 font-bold">$</span>
-                <span id="term-command" class="text-white font-semibold"></span>
-                <span class="term-cursor"></span>
-              </div>
-              <div id="term-body" class="space-y-1.5 pt-2 border-t border-slate-900">
-                <!-- Rendered dynamically -->
-              </div>
-            </div>
-
+        <div class="p-6 font-mono text-xs space-y-2.5 min-h-[200px] bg-black/60">
+          <div class="text-[#86868b] flex items-center gap-2">
+            <span class="text-[#2997ff]">$</span>
+            <span id="term-command" class="text-white font-semibold"></span>
+            <span class="term-cursor"></span>
+          </div>
+          <div id="term-body" class="space-y-1 pt-2 border-t border-white/[0.04]">
+            <!-- Dynamic terminal lines -->
           </div>
         </div>
 
       </div>
 
-      <!-- Stats Bar -->
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12 pt-8 border-t border-slate-800/80">
-        <div class="p-4 rounded-2xl bg-slate-950/70 border border-slate-800">
-          <span class="text-2xl sm:text-3xl font-black text-amber-400 font-mono">2,821+</span>
-          <p class="text-xs text-slate-400 mt-1 font-semibold">Kỹ Năng Đã Xác Thực</p>
+      <!-- Apple Key Numbers Grid -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto mt-16 pt-10 border-t border-white/[0.08]">
+        <div>
+          <span class="text-3xl sm:text-4xl font-bold text-white tracking-tight font-mono">2,821+</span>
+          <p class="text-xs text-[#86868b] mt-1">Kỹ Năng Đã Xác Thực</p>
         </div>
-        <div class="p-4 rounded-2xl bg-slate-950/70 border border-slate-800">
-          <span class="text-2xl sm:text-3xl font-black text-white font-mono">9 Gói</span>
-          <p class="text-xs text-slate-400 mt-1 font-semibold">Dự Án Turnkey Trọn Gói</p>
+        <div>
+          <span class="text-3xl sm:text-4xl font-bold text-white tracking-tight font-mono">9 Gói</span>
+          <p class="text-xs text-[#86868b] mt-1">Dự Án Trọn Gói</p>
         </div>
-        <div class="p-4 rounded-2xl bg-slate-950/70 border border-slate-800">
-          <span class="text-2xl sm:text-3xl font-black text-amber-400 font-mono">585 File</span>
-          <p class="text-xs text-slate-400 mt-1 font-semibold">SFX & BGM Bản Quyền 5★</p>
+        <div>
+          <span class="text-3xl sm:text-4xl font-bold text-white tracking-tight font-mono">585</span>
+          <p class="text-xs text-[#86868b] mt-1">SFX & BGM Bản Quyền 5★</p>
         </div>
-        <div class="p-4 rounded-2xl bg-slate-950/70 border border-slate-800">
-          <span class="text-2xl sm:text-3xl font-black text-emerald-400 font-mono">100%</span>
-          <p class="text-xs text-slate-400 mt-1 font-semibold">Quét VietQR Tự Động</p>
+        <div>
+          <span class="text-3xl sm:text-4xl font-bold text-[#2997ff] tracking-tight font-mono">VietQR</span>
+          <p class="text-xs text-[#86868b] mt-1">Thanh Toán 1 Chạm</p>
         </div>
       </div>
 
     </div>
   </section>
 
-  <!-- INTERACTIVE AUDIO & SFX PREVIEW BAR (FLOATING DEMO) -->
-  <div id="audio-preview-bar" class="hidden sticky top-20 z-30 bg-slate-950/95 border-b border-amber-500/30 px-4 py-3 backdrop-blur-xl">
-    <div class="max-w-7xl mx-auto flex items-center justify-between gap-4">
+  <!-- FLOATING AUDIO PREVIEW BAR -->
+  <div id="audio-preview-bar" class="hidden sticky top-14 z-30 bg-[#161617]/95 border-b border-white/[0.12] px-4 py-3 backdrop-blur-2xl">
+    <div class="max-w-[1024px] mx-auto flex items-center justify-between gap-4">
       <div class="flex items-center gap-3">
-        <div class="w-8 h-8 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center">
+        <div class="w-8 h-8 rounded-full bg-white/10 text-white flex items-center justify-center">
           <i data-lucide="volume-2" class="w-4 h-4"></i>
         </div>
         <div>
-          <span id="audio-preview-title" class="text-xs font-bold text-white block">VieNeu-TTS Hà Nội (48 kHz)</span>
-          <span id="audio-preview-desc" class="text-[10px] text-slate-400">Đang tổng hợp âm thanh mẫu thời gian thực...</span>
+          <span id="audio-preview-title" class="text-xs font-semibold text-white block">VieNeu-TTS Hà Nội (48 kHz)</span>
+          <span id="audio-preview-desc" class="text-[11px] text-[#86868b]">Âm thanh mẫu chất lượng Ultra-HD...</span>
         </div>
       </div>
       
-      <div id="audio-preview-wave" class="flex items-center gap-1 h-5">
-        <span class="w-1 h-3 bg-amber-400 rounded-full"></span>
-        <span class="w-1 h-5 bg-amber-400 rounded-full"></span>
-        <span class="w-1 h-2 bg-amber-400 rounded-full"></span>
-        <span class="w-1 h-4 bg-amber-400 rounded-full"></span>
-        <span class="w-1 h-3 bg-amber-400 rounded-full"></span>
+      <div id="audio-preview-wave" class="flex items-center gap-1 h-4">
+        <span class="w-1 h-3 bg-[#2997ff] rounded-full"></span>
+        <span class="w-1 h-5 bg-[#2997ff] rounded-full"></span>
+        <span class="w-1 h-2 bg-[#2997ff] rounded-full"></span>
+        <span class="w-1 h-4 bg-[#2997ff] rounded-full"></span>
       </div>
 
-      <button onclick="document.getElementById('audio-preview-bar').classList.add('hidden')" class="p-1 rounded-md text-slate-400 hover:text-white">
+      <button onclick="document.getElementById('audio-preview-bar').classList.add('hidden')" class="p-1.5 rounded-full text-[#86868b] hover:text-white">
         <i data-lucide="x" class="w-4 h-4"></i>
       </button>
     </div>
   </div>
 
-  <!-- MAIN APP CONTAINER -->
-  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+  <!-- MAIN WRAPPER -->
+  <main class="max-w-[1024px] mx-auto px-4 sm:px-6 py-12">
     
     <!-- ============================================================== -->
-    <!-- VIEW 1: THEO DỰ ÁN (PROJECT BUNDLES)                           -->
+    <!-- VIEW 1: PROJECTS (APPLE BENTO GRID)                            -->
     <!-- ============================================================== -->
-    <section id="projects-view" class="space-y-8">
+    <section id="projects-view" class="space-y-10">
       
-      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-slate-800 pb-6">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-white/[0.08] pb-6">
         <div>
-          <span class="text-xs font-bold text-amber-400 uppercase tracking-widest">Turnkey Workflows</span>
-          <h2 class="text-2xl sm:text-3xl font-black text-white tracking-tight mt-1">
-            Gói Giải Pháp Theo Dự Án & Kênh Thực Chiến
+          <span class="text-xs font-semibold uppercase tracking-[0.08em] text-[#86868b]">Turnkey Solutions</span>
+          <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight mt-1">
+            Gói Giải Pháp Theo Dự Án
           </h2>
-          <p class="text-xs sm:text-sm text-slate-400 mt-1 font-light">Đóng gói sẵn kịch bản 6 hồi, âm thanh bản quyền, phụ đề và bot tự động hóa sản xuất ngay.</p>
+          <p class="text-sm text-[#86868b] mt-1 font-normal">Kịch bản 6 hồi điện ảnh, âm thanh bản quyền và tự động hóa sản xuất ngay lập tức.</p>
         </div>
 
-        <!-- Audio Demo Trigger Buttons -->
         <div class="flex items-center gap-2">
-          <button onclick="playAudioDemo('VieNeu-TTS Ultra-HD', 'Giọng mẫu Bắc - Hà Nội (48 kHz)')" class="px-3 py-1.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-amber-500/50 text-amber-400 text-xs font-bold flex items-center gap-1.5 transition">
+          <button onclick="playAudioDemo('VieNeu-TTS Ultra-HD', 'Mẫu giọng đọc Bắc - Hà Nội (48 kHz)')" class="px-3.5 py-1.5 rounded-full bg-white/10 hover:bg-white/20 text-white text-xs font-semibold flex items-center gap-1.5 transition">
             <i data-lucide="mic" class="w-3.5 h-3.5"></i> Nghe Thử VieNeu
           </button>
-          <button onclick="playAudioDemo('SFX Thư Viện', 'Sub-boom + Cinematic Whoosh')" class="px-3 py-1.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-amber-500/50 text-slate-300 text-xs font-bold flex items-center gap-1.5 transition">
+          <button onclick="playAudioDemo('SFX Thư Viện', 'Sub-boom + Cinematic Whoosh')" class="px-3.5 py-1.5 rounded-full bg-white/10 hover:bg-white/20 text-[#d2d2d7] text-xs font-semibold flex items-center gap-1.5 transition">
             <i data-lucide="volume-2" class="w-3.5 h-3.5"></i> Thử Âm SFX
           </button>
         </div>
       </div>
 
-      <!-- Project Cards Grid -->
-      <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7">
+      <!-- Bento Grid Cards -->
+      <div id="projects-grid" class="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <!-- Rendered dynamically by app.js -->
       </div>
 
     </section>
 
     <!-- ============================================================== -->
-    <!-- VIEW 2: THEO TỪNG MỤC (CATEGORIES)                             -->
+    <!-- VIEW 2: CATEGORIES                                             -->
     <!-- ============================================================== -->
-    <section id="categories-view" class="hidden space-y-8">
+    <section id="categories-view" class="hidden space-y-10">
       
-      <div class="border-b border-slate-800 pb-6">
-        <span class="text-xs font-bold text-amber-400 uppercase tracking-widest">Taxonomy & Domains</span>
-        <h2 class="text-2xl sm:text-3xl font-black text-white tracking-tight mt-1">
-          Phân Loại Theo Từng Mục Chuyên Môn
+      <div class="border-b border-white/[0.08] pb-6">
+        <span class="text-xs font-semibold uppercase tracking-[0.08em] text-[#86868b]">Taxonomy</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight mt-1">
+          Phân Loại Theo Chuyên Mục
         </h2>
-        <p class="text-xs sm:text-sm text-slate-400 mt-1 font-light">Khám phá kho kỹ năng qua 8 trụ cột từ Media, Âm thanh đến An ninh mạng và Đám mây.</p>
+        <p class="text-sm text-[#86868b] mt-1 font-normal">8 lĩnh vực chuyên môn từ Media, Âm thanh đến An ninh mạng và Đám mây.</p>
       </div>
 
-      <!-- Categories Grid -->
-      <div id="categories-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div id="categories-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
         <!-- Rendered dynamically by app.js -->
       </div>
 
     </section>
 
     <!-- ============================================================== -->
-    <!-- VIEW 3: TỪNG SKILL LẺ (MASTER CATALOG)                         -->
+    <!-- VIEW 3: INDIVIDUAL SKILLS (MASTER CATALOG)                     -->
     <!-- ============================================================== -->
     <section id="skills-view" class="hidden space-y-8">
       
-      <div class="border-b border-slate-800 pb-6">
-        <span class="text-xs font-bold text-amber-400 uppercase tracking-widest">Master Catalog</span>
-        <h2 class="text-2xl sm:text-3xl font-black text-white tracking-tight mt-1">
+      <div class="border-b border-white/[0.08] pb-6">
+        <span class="text-xs font-semibold uppercase tracking-[0.08em] text-[#86868b]">Master Catalog</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight mt-1">
           Toàn Bộ 2,821 Kỹ Năng Đơn Lẻ
         </h2>
-        <p class="text-xs sm:text-sm text-slate-400 mt-1 font-light">Tra cứu, lọc nhanh theo tag và mua lẻ từng skill cho Antigravity & Claude Code.</p>
+        <p class="text-sm text-[#86868b] mt-1 font-normal">Tra cứu, chọn lọc và mua lẻ từng skill theo nhu cầu của bạn.</p>
       </div>
 
-      <!-- Advanced Filter & View Mode Controls -->
-      <div class="flex flex-wrap items-center justify-between gap-4 p-4 rounded-2xl bg-slate-900/90 border border-slate-800">
+      <!-- Filter Controls Bar -->
+      <div class="flex flex-wrap items-center justify-between gap-4 p-4 rounded-[22px] bg-[#161617] border border-white/[0.08]">
         
         <div class="flex flex-wrap items-center gap-3">
-          
-          <!-- Category Select -->
           <select 
             id="category-filter" 
             onchange="STATE.selectedCategory = this.value; filterSkills(); renderSkills();" 
-            class="bg-slate-950 border border-slate-800 text-slate-300 text-xs rounded-xl px-3.5 py-2.5 focus:outline-none focus:border-amber-500 font-semibold"
+            class="bg-black border border-white/[0.08] text-white text-xs rounded-full px-4 py-2 focus:outline-none focus:border-[#2997ff] font-medium"
           >
             <option value="all">Tất cả chuyên mục (8 domains)</option>
             <option value="video-media">🎬 Video & Hậu kỳ Điện Ảnh</option>
@@ -423,11 +371,10 @@
             <option value="marketing">📈 Marketing & SEO</option>
           </select>
 
-          <!-- Sort Select -->
           <select 
             id="sort-filter" 
             onchange="STATE.sortBy = this.value; filterSkills(); renderSkills();" 
-            class="bg-slate-950 border border-slate-800 text-slate-300 text-xs rounded-xl px-3.5 py-2.5 focus:outline-none focus:border-amber-500 font-semibold"
+            class="bg-black border border-white/[0.08] text-white text-xs rounded-full px-4 py-2 focus:outline-none focus:border-[#2997ff] font-medium"
           >
             <option value="popular">Sắp xếp: Phổ biến nhất</option>
             <option value="price-asc">Giá: Thấp đến Cao</option>
@@ -435,42 +382,39 @@
             <option value="rating">Đánh giá: Cao nhất (5★)</option>
           </select>
 
-          <!-- Curated Filter Toggle -->
-          <label class="flex items-center gap-2 cursor-pointer text-xs text-slate-300 bg-slate-950 px-3.5 py-2.5 rounded-xl border border-slate-800 select-none">
+          <label class="flex items-center gap-2 cursor-pointer text-xs text-white bg-black px-4 py-2 rounded-full border border-white/[0.08] select-none">
             <input 
               type="checkbox" 
               id="curated-toggle" 
               onchange="STATE.curatedOnly = this.checked; filterSkills(); renderSkills();"
-              class="rounded bg-slate-900 border-slate-700 text-amber-500 focus:ring-amber-500"
+              class="rounded bg-[#1d1d1f] border-white/20 text-[#0071e3] focus:ring-[#0071e3]"
             >
-            <span class="font-bold text-amber-400">119 Skills Thực Chiến</span>
+            <span class="font-medium">119 Skills Thực Chiến</span>
           </label>
         </div>
 
-        <!-- View Mode Switcher (Grid vs Table) -->
         <div class="flex items-center gap-2">
-          <button id="view-grid-btn" onclick="setViewMode('grid')" title="Dạng lưới thẻ" class="p-2 rounded-lg bg-slate-800 text-amber-400 border border-slate-700">
+          <button id="view-grid-btn" onclick="setViewMode('grid')" title="Dạng lưới" class="p-2 rounded-lg bg-white/10 text-white">
             <i data-lucide="grid" class="w-4 h-4"></i>
           </button>
-          <button id="view-table-btn" onclick="setViewMode('table')" title="Dạng danh sách gọn" class="p-2 rounded-lg bg-slate-900 text-slate-400 hover:text-white border border-slate-800">
+          <button id="view-table-btn" onclick="setViewMode('table')" title="Dạng bảng" class="p-2 rounded-lg text-[#86868b] hover:text-white">
             <i data-lucide="list" class="w-4 h-4"></i>
           </button>
-          <span id="skills-count-text" class="text-xs text-slate-400 font-mono ml-2">Đang tải...</span>
+          <span id="skills-count-text" class="text-xs text-[#86868b] font-mono ml-2">Đang tải...</span>
         </div>
 
       </div>
 
-      <!-- Skills Dynamic Grid / Table -->
+      <!-- Skills Grid / Table Container -->
       <div id="skills-grid">
-        <!-- Rendered dynamically by app.js -->
+        <!-- Rendered dynamically -->
       </div>
 
-      <!-- Load More Button -->
-      <div class="text-center pt-6">
+      <div class="text-center pt-8">
         <button 
           id="load-more-btn" 
           onclick="loadMoreSkills()" 
-          class="hidden px-7 py-3 rounded-2xl bg-slate-900 hover:bg-slate-800 border border-slate-800 hover:border-amber-500 text-slate-200 text-xs font-bold transition duration-200 shadow-xl"
+          class="hidden px-7 py-3 rounded-full bg-white/10 hover:bg-white/20 text-white text-xs font-semibold transition"
         >
           Xem thêm 36 kỹ năng tiếp theo
         </button>
@@ -479,68 +423,58 @@
     </section>
 
     <!-- ============================================================== -->
-    <!-- VIEW 4: HƯỚNG DẪN CÀI ĐẶT (INSTALLATION RUNBOOK)                -->
+    <!-- VIEW 4: INSTALLATION RUNBOOK                                   -->
     <!-- ============================================================== -->
-    <section id="guide-view" class="hidden space-y-8">
+    <section id="guide-view" class="hidden space-y-10">
       
-      <div class="border-b border-slate-800 pb-6">
-        <span class="text-xs font-bold text-amber-400 uppercase tracking-widest">Installation Runbook</span>
-        <h2 class="text-2xl sm:text-3xl font-black text-white tracking-tight mt-1">
-          Hướng Dẫn Kích Hoạt & Cài Đặt Skills
+      <div class="border-b border-white/[0.08] pb-6">
+        <span class="text-xs font-semibold uppercase tracking-[0.08em] text-[#86868b]">Installation</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight mt-1">
+          Hướng Dẫn Kích Hoạt Kỹ Năng
         </h2>
-        <p class="text-xs sm:text-sm text-slate-400 mt-1 font-light">Chỉ 1 lần thiết lập, toàn bộ 2,821 skills sẽ sẵn sàng hoạt động trong Google Antigravity và Claude Code.</p>
+        <p class="text-sm text-[#86868b] mt-1 font-normal">Thiết lập đơn giản để Antigravity và Claude Code nhận diện tức thì.</p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         
-        <!-- Antigravity Setup -->
-        <div class="p-7 rounded-3xl bg-slate-900/90 border border-slate-800 space-y-4">
-          <div class="w-11 h-11 rounded-2xl bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center text-slate-950 font-black">
+        <div class="p-8 rounded-[28px] bg-[#161617] border border-white/[0.08] space-y-4">
+          <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white font-bold text-sm">
             1
           </div>
-          <h3 class="text-lg font-bold text-white">Cách 1: Nạp Tự Động Vào Antigravity IDE</h3>
-          <p class="text-xs text-slate-300 leading-relaxed font-light">
-            Antigravity tự động phát hiện kỹ năng trong thư mục toàn cục <code class="text-amber-400 bg-slate-950 px-1.5 py-0.5 rounded font-mono">~/.gemini/config/skills</code>.
+          <h3 class="text-xl font-bold text-white">Tự Động Nhận Diện Trong Antigravity</h3>
+          <p class="text-xs text-[#86868b] leading-relaxed">
+            Antigravity tự động phát hiện kỹ năng trong thư mục toàn cục <code class="text-white bg-black px-2 py-0.5 rounded font-mono">~/.gemini/config/skills</code>.
           </p>
           
-          <div class="bg-slate-950 p-4 rounded-2xl border border-slate-800 font-mono text-xs text-slate-300 space-y-2">
-            <p class="text-slate-500">// Mở PowerShell và dán câu lệnh tạo liên kết (Junction):</p>
-            <div class="flex items-center justify-between text-amber-300 bg-slate-900 p-3 rounded-xl overflow-x-auto border border-slate-800">
-              <code>cmd /c mklink /J "%USERPROFILE%\.gemini\config\skills" "ĐƯỜNG_DẪN_THƯ_MỤC_SKILLS"</code>
-              <button onclick="copyToClipboard('cmd /c mklink /J &quot;%USERPROFILE%\\.gemini\\config\\skills&quot; &quot;J:\\Other computers\\My Computer (2)\\MTDES23\\CLAUDE SKILL\\Skills_Antigravity\\skills&quot;')" class="text-slate-400 hover:text-white ml-2 p-1 rounded" title="Sao chép">
+          <div class="bg-black/60 p-4 rounded-2xl border border-white/[0.06] font-mono text-xs space-y-2">
+            <p class="text-[#86868b]">// Chạy lệnh tạo liên kết thư mục (Junction) trong PowerShell:</p>
+            <div class="flex items-center justify-between text-[#2997ff] bg-[#161617] p-3 rounded-xl border border-white/[0.04]">
+              <code class="text-[11px] truncate mr-2">cmd /c mklink /J "%USERPROFILE%\.gemini\config\skills" "ĐƯỜNG_DẪN"</code>
+              <button onclick="copyToClipboard('cmd /c mklink /J &quot;%USERPROFILE%\\.gemini\\config\\skills&quot; &quot;J:\\Other computers\\My Computer (2)\\MTDES23\\CLAUDE SKILL\\Skills_Antigravity\\skills&quot;')" class="text-[#86868b] hover:text-white" title="Sao chép">
                 <i data-lucide="copy" class="w-4 h-4"></i>
               </button>
             </div>
           </div>
-
-          <p class="text-xs text-slate-400">
-            Khởi động lại Antigravity, hệ thống sẽ tự động quét và nạp toàn bộ danh mục kỹ năng.
-          </p>
         </div>
 
-        <!-- Claude Code Setup -->
-        <div class="p-7 rounded-3xl bg-slate-900/90 border border-slate-800 space-y-4">
-          <div class="w-11 h-11 rounded-2xl bg-gradient-to-br from-blue-400 to-indigo-500 flex items-center justify-center text-slate-950 font-black">
+        <div class="p-8 rounded-[28px] bg-[#161617] border border-white/[0.08] space-y-4">
+          <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white font-bold text-sm">
             2
           </div>
-          <h3 class="text-lg font-bold text-white">Cách 2: Sử Dụng Với Claude Code & Codex</h3>
-          <p class="text-xs text-slate-300 leading-relaxed font-light">
-            Claude Code hỗ trợ nạp qua file chỉ mục <code class="text-cyan-400 bg-slate-950 px-1.5 py-0.5 rounded font-mono">skills_index.json</code> hoặc gõ trực tiếp lệnh Slash Command.
+          <h3 class="text-xl font-bold text-white">Sử Dụng Trực Tiếp Qua Lệnh Slash</h3>
+          <p class="text-xs text-[#86868b] leading-relaxed">
+            Trong thanh chat của Antigravity hoặc Claude Code, gõ trực tiếp tên kỹ năng để triệu hồi AI chuyên gia.
           </p>
           
-          <div class="bg-slate-950 p-4 rounded-2xl border border-slate-800 font-mono text-xs text-slate-300 space-y-2">
-            <p class="text-slate-500">// Gõ câu lệnh trực tiếp trong thanh chat:</p>
-            <div class="flex items-center justify-between text-cyan-300 bg-slate-900 p-3 rounded-xl border border-slate-800">
+          <div class="bg-black/60 p-4 rounded-2xl border border-white/[0.06] font-mono text-xs space-y-2">
+            <p class="text-[#86868b]">// Gõ trong thanh nhập liệu:</p>
+            <div class="flex items-center justify-between text-[#2997ff] bg-[#161617] p-3 rounded-xl border border-white/[0.04]">
               <code>/mrtkeyword  hoặc  /skill xspeedvn-supercar-video</code>
-              <button onclick="copyToClipboard('/mrtkeyword')" class="text-slate-400 hover:text-white ml-2 p-1 rounded" title="Sao chép">
+              <button onclick="copyToClipboard('/mrtkeyword')" class="text-[#86868b] hover:text-white" title="Sao chép">
                 <i data-lucide="copy" class="w-4 h-4"></i>
               </button>
             </div>
           </div>
-
-          <p class="text-xs text-slate-400">
-            AI sẽ tự động đọc kịch bản <code class="text-slate-200">SKILL.md</code> và thực thi từng bước theo đúng tiêu chuẩn.
-          </p>
         </div>
 
       </div>
@@ -550,77 +484,76 @@
   </main>
 
   <!-- ============================================================== -->
-  <!-- SLIDE-OVER CART DRAWER (STRIPE/SHOPIFY GRADE)                  -->
+  <!-- APPLE STORE BAG (SLIDE-OVER CART DRAWER)                       -->
   <!-- ============================================================== -->
-  <div id="cart-drawer-overlay" class="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm hidden transition-opacity"></div>
-  <aside id="cart-drawer" class="fixed top-0 right-0 z-50 w-full sm:w-[450px] h-full bg-slate-900 border-l border-slate-800 shadow-2xl transform translate-x-full transition-transform duration-300 ease-out flex flex-col justify-between">
+  <div id="cart-drawer-overlay" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-md hidden transition-opacity"></div>
+  <aside id="cart-drawer" class="fixed top-0 right-0 z-50 w-full sm:w-[440px] h-full bg-[#161617] border-l border-white/[0.12] shadow-2xl transform translate-x-full transition-transform duration-300 ease-out flex flex-col justify-between">
     
-    <!-- Drawer Header -->
-    <div class="p-6 border-b border-slate-800 flex items-center justify-between">
-      <div class="flex items-center gap-2.5">
-        <i data-lucide="shopping-bag" class="w-5 h-5 text-amber-400"></i>
-        <h3 class="text-base font-bold text-white">Giỏ Hàng Của Bạn</h3>
+    <div class="p-6 border-b border-white/[0.08] flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <i data-lucide="shopping-bag" class="w-5 h-5 text-white"></i>
+        <h3 class="text-base font-bold text-white">Túi Hàng Của Bạn</h3>
       </div>
-      <button id="cart-drawer-close" class="p-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white transition">
+      <button id="cart-drawer-close" class="p-2 rounded-full hover:bg-white/10 text-[#86868b] hover:text-white transition">
         <i data-lucide="x" class="w-4 h-4"></i>
       </button>
     </div>
 
-    <!-- Empty State -->
-    <div id="cart-empty-view" class="p-8 text-center text-slate-400 space-y-3 my-auto hidden">
-      <i data-lucide="shopping-bag" class="w-14 h-14 mx-auto text-slate-700"></i>
-      <p class="text-sm font-semibold">Giỏ hàng của bạn đang trống.</p>
-      <button onclick="closeCartDrawer(); setTab('projects');" class="px-5 py-2.5 rounded-xl bg-amber-500 text-slate-950 font-bold text-xs hover:bg-amber-400 transition shadow-lg">
-        Xem các gói dự án ngay
+    <!-- Empty View -->
+    <div id="cart-empty-view" class="p-8 text-center text-[#86868b] space-y-3 my-auto hidden">
+      <i data-lucide="shopping-bag" class="w-12 h-12 mx-auto text-[#515154]"></i>
+      <p class="text-sm font-medium">Túi hàng của bạn đang trống.</p>
+      <button onclick="closeCartDrawer(); setTab('projects');" class="px-5 py-2.5 rounded-full bg-[#0071e3] text-white font-medium text-xs hover:bg-[#0077ed] transition">
+        Khám phá các gói dự án
       </button>
     </div>
 
-    <!-- Drawer Content -->
+    <!-- Bag Items -->
     <div id="cart-content-view" class="flex-1 overflow-y-auto p-6 space-y-4">
-      <div id="cart-items-list" class="space-y-2.5">
+      <div id="cart-items-list" class="space-y-3">
         <!-- Rendered dynamically -->
       </div>
 
-      <!-- Coupon Code Section -->
-      <div class="pt-4 border-t border-slate-800 space-y-2">
-        <label class="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">Mã ưu đãi (Coupon):</label>
+      <!-- Coupon -->
+      <div class="pt-4 border-t border-white/[0.08] space-y-2">
+        <label class="text-[11px] font-semibold text-[#86868b] uppercase tracking-wider block">Mã Ưu Đãi:</label>
         <div class="flex items-center gap-2">
           <input 
             type="text" 
             id="coupon-input" 
-            placeholder="Nhập ANTIGRAVITY hoặc VIP2026" 
-            class="flex-1 bg-slate-950 border border-slate-800 focus:border-amber-500 rounded-xl px-3.5 py-2 text-xs text-slate-200 uppercase font-mono focus:outline-none"
+            placeholder="ANTIGRAVITY hoặc VIP2026" 
+            class="flex-1 bg-black border border-white/[0.08] focus:border-[#2997ff] rounded-full px-4 py-2 text-xs text-white uppercase font-mono focus:outline-none"
           >
-          <button onclick="applyCouponCode()" class="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-amber-400 text-xs font-bold border border-slate-700 transition">
+          <button onclick="applyCouponCode()" class="px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 text-white text-xs font-semibold transition">
             Áp dụng
           </button>
         </div>
       </div>
     </div>
 
-    <!-- Drawer Footer / Checkout CTA -->
-    <div class="p-6 border-t border-slate-800 bg-slate-950 space-y-3">
+    <!-- Bag Summary & Checkout -->
+    <div class="p-6 border-t border-white/[0.08] bg-black/60 space-y-3">
       <div class="space-y-1.5 text-xs">
-        <div class="flex items-center justify-between text-slate-400">
+        <div class="flex items-center justify-between text-[#86868b]">
           <span>Tạm tính:</span>
-          <span id="cart-subtotal-price" class="font-mono font-bold text-slate-200">0 đ</span>
+          <span id="cart-subtotal-price" class="font-mono font-bold text-white">0 đ</span>
         </div>
-        <div id="cart-discount-row" class="hidden flex items-center justify-between text-emerald-400 font-semibold">
+        <div id="cart-discount-row" class="hidden flex items-center justify-between text-[#2997ff] font-medium">
           <span>Giảm giá:</span>
           <span id="cart-discount-value" class="font-mono font-bold">0 đ</span>
         </div>
-        <div class="flex items-center justify-between text-sm font-bold pt-2 border-t border-slate-800">
-          <span class="text-white">Tổng thanh toán:</span>
-          <span id="cart-total-price" class="text-xl font-black text-amber-400 font-mono">0 đ</span>
+        <div class="flex items-center justify-between text-sm font-bold pt-2 border-t border-white/[0.08]">
+          <span class="text-white">Tổng cộng:</span>
+          <span id="cart-total-price" class="text-xl font-bold text-white font-mono">0 đ</span>
         </div>
       </div>
 
       <div class="grid grid-cols-2 gap-2.5 pt-2">
-        <button onclick="clearCart()" class="py-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-400 text-xs font-semibold border border-slate-800 transition">
-          Xóa giỏ hàng
+        <button onclick="clearCart()" class="py-3 rounded-full bg-white/5 hover:bg-white/10 text-[#86868b] text-xs font-medium transition">
+          Xóa túi hàng
         </button>
-        <button onclick="checkoutCart()" class="py-3 rounded-xl bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 text-slate-950 text-xs font-black transition flex items-center justify-center gap-2 shadow-xl shadow-amber-500/20">
-          <i data-lucide="qr-code" class="w-4 h-4"></i> Quét VietQR
+        <button onclick="checkoutCart()" class="py-3 rounded-full bg-[#0071e3] hover:bg-[#0077ed] text-white text-xs font-semibold transition flex items-center justify-center gap-2 shadow-lg">
+          <i data-lucide="qr-code" class="w-4 h-4"></i> Thanh Toán VietQR
         </button>
       </div>
     </div>
@@ -628,42 +561,45 @@
   </aside>
 
   <!-- ============================================================== -->
-  <!-- MODAL 1: DETAIL MODAL                                          -->
+  <!-- MODAL: DETAIL MODAL                                            -->
   <!-- ============================================================== -->
-  <div id="detail-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/85 backdrop-blur-md p-4 hidden">
-    <div class="bg-slate-900 border border-slate-800 rounded-3xl max-w-2xl w-full p-6 sm:p-8 max-h-[90vh] overflow-y-auto space-y-6 shadow-2xl relative">
+  <div id="detail-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-md p-4 hidden">
+    <div class="bg-[#161617] border border-white/[0.12] rounded-[32px] max-w-2xl w-full p-8 max-h-[90vh] overflow-y-auto space-y-6 shadow-2xl relative">
       
-      <button data-modal-close class="absolute top-5 right-5 p-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white transition">
+      <!-- Grab handle (iOS sheet style) -->
+      <div class="w-10 h-1 bg-white/20 rounded-full mx-auto -mt-2 mb-4"></div>
+
+      <button data-modal-close class="absolute top-6 right-6 p-2 rounded-full bg-white/10 text-[#86868b] hover:text-white transition">
         <i data-lucide="x" class="w-4 h-4"></i>
       </button>
 
       <div>
-        <span id="detail-badge" class="inline-block px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-amber-500/20 text-amber-400 border border-amber-500/30 mb-2">
+        <span id="detail-badge" class="inline-block px-3 py-1 rounded-full text-[11px] font-semibold bg-white/10 text-[#a1a1a6] mb-2">
           Kỹ Năng
         </span>
-        <h3 id="detail-title" class="text-2xl font-black text-white leading-tight">
+        <h3 id="detail-title" class="text-2xl sm:text-3xl font-bold text-white leading-tight">
           Chi Tiết Kỹ Năng
         </h3>
       </div>
 
-      <div id="detail-body" class="text-slate-300">
+      <div id="detail-body" class="text-[#d2d2d7]">
         <!-- Rendered dynamically -->
       </div>
 
-      <div class="pt-5 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="pt-6 border-t border-white/[0.08] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
-          <span class="text-xs text-slate-400 block font-medium">Giá ưu đãi:</span>
+          <span class="text-xs text-[#86868b] block">Giá ưu đãi:</span>
           <div class="flex items-baseline gap-2">
-            <span id="detail-price" class="text-2xl font-black text-amber-400 font-mono">0 đ</span>
-            <span id="detail-original-price" class="text-xs text-slate-500 line-through font-mono">0 đ</span>
+            <span id="detail-price" class="text-2xl font-bold text-white font-mono">0 đ</span>
+            <span id="detail-original-price" class="text-xs text-[#86868b] line-through font-mono">0 đ</span>
           </div>
         </div>
 
-        <div class="flex items-center gap-3 w-full sm:w-auto">
-          <button id="detail-cart-btn" class="flex-1 sm:flex-none px-4 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-bold transition flex items-center justify-center gap-1.5 border border-slate-700">
-            <i data-lucide="shopping-bag" class="w-4 h-4"></i> Thêm Giỏ
+        <div class="flex items-center gap-3">
+          <button id="detail-cart-btn" class="px-5 py-2.5 rounded-full bg-white/10 hover:bg-white/20 text-white text-xs font-semibold transition">
+            Thêm vào túi
           </button>
-          <button id="detail-buy-btn" class="flex-1 sm:flex-none px-6 py-3 rounded-xl bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 text-slate-950 text-xs font-black transition flex items-center justify-center gap-2 shadow-lg shadow-amber-500/25">
+          <button id="detail-buy-btn" class="px-6 py-2.5 rounded-full bg-[#0071e3] hover:bg-[#0077ed] text-white text-xs font-semibold transition flex items-center gap-1.5 shadow-md">
             <i data-lucide="qr-code" class="w-4 h-4"></i> Mua Ngay QR
           </button>
         </div>
@@ -673,90 +609,84 @@
   </div>
 
   <!-- ============================================================== -->
-  <!-- MODAL 2: APPLE-GRADE VIETQR CHECKOUT MODAL                     -->
+  <!-- MODAL: APPLE PAY STYLE VIETQR CHECKOUT                         -->
   <!-- ============================================================== -->
   <div id="checkout-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/85 backdrop-blur-md p-4 hidden">
-    <div class="bg-slate-900 border border-slate-800 rounded-3xl max-w-xl w-full p-6 sm:p-8 max-h-[95vh] overflow-y-auto space-y-6 shadow-2xl relative">
+    <div class="bg-[#161617] border border-white/[0.12] rounded-[32px] max-w-lg w-full p-7 max-h-[95vh] overflow-y-auto space-y-6 shadow-2xl relative">
       
-      <button data-modal-close class="absolute top-5 right-5 p-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white transition">
+      <div class="w-10 h-1 bg-white/20 rounded-full mx-auto -mt-2 mb-2"></div>
+
+      <button data-modal-close class="absolute top-6 right-6 p-2 rounded-full bg-white/10 text-[#86868b] hover:text-white transition">
         <i data-lucide="x" class="w-4 h-4"></i>
       </button>
 
-      <!-- Checkout Header -->
       <div class="text-center space-y-1">
-        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-amber-500/10 text-amber-400 border border-amber-500/30">
-          <i data-lucide="shield-check" class="w-3.5 h-3.5"></i> Cổng Thanh Toán VietQR Tự Động
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-semibold bg-[#0071e3]/15 text-[#2997ff]">
+          <i data-lucide="shield-check" class="w-3.5 h-3.5"></i> Thanh Toán Tự Động VietQR
         </span>
-        <h3 class="text-xl sm:text-2xl font-black text-white">Quét Mã QR Để Mở Khóa Kỹ Năng</h3>
-        <p class="text-xs text-slate-400">Mã đơn hàng: <span id="checkout-order-id" class="text-amber-400 font-mono font-bold">#SK8888</span></p>
+        <h3 class="text-2xl font-bold text-white tracking-tight">Quét Mã QR Để Mở Khóa</h3>
+        <p class="text-xs text-[#86868b]">Mã đơn hàng: <span id="checkout-order-id" class="text-white font-mono font-bold">#SK8888</span></p>
       </div>
 
-      <!-- Bank Selector Grid (Real Bank Logos) -->
+      <!-- Bank Selector Grid -->
       <div>
-        <label class="text-[11px] font-bold text-slate-400 uppercase tracking-wider block mb-2">Chọn ngân hàng thanh toán:</label>
+        <label class="text-[11px] font-semibold text-[#86868b] uppercase tracking-wider block mb-2">Chọn ngân hàng chuyển tiền:</label>
         <div id="checkout-bank-selector" class="grid grid-cols-4 gap-2">
           <!-- Rendered dynamically -->
         </div>
       </div>
 
-      <!-- VIETQR DISPLAY CONTAINER -->
-      <div class="bg-slate-950 p-6 rounded-3xl border border-slate-800 flex flex-col items-center">
+      <!-- QR Display Frame -->
+      <div class="bg-black/60 p-6 rounded-[28px] border border-white/[0.08] flex flex-col items-center">
         
-        <!-- Dynamic QR Code Frame with animated scanner line -->
-        <div class="relative w-64 h-64 sm:w-72 sm:h-72 bg-white p-3.5 rounded-2xl shadow-2xl flex items-center justify-center overflow-hidden border-2 border-amber-500/50">
+        <div class="relative w-64 h-64 bg-white p-3.5 rounded-2xl shadow-xl flex items-center justify-center overflow-hidden">
           <div class="scanner-line"></div>
-          <img 
-            id="vietqr-image" 
-            src="" 
-            alt="Mã QR Thanh Toán Ngân Hàng" 
-            class="w-full h-full object-contain"
-          >
+          <img id="vietqr-image" src="" alt="Mã QR VietQR" class="w-full h-full object-contain">
         </div>
 
-        <!-- Countdown Timer -->
-        <div class="flex items-center gap-2 mt-4 text-xs font-semibold text-slate-400">
-          <i data-lucide="clock" class="w-4 h-4 text-amber-400"></i>
-          <span>Mã QR có hiệu lực trong: <span id="qr-countdown" class="text-amber-400 font-mono font-bold">15:00</span></span>
+        <div class="flex items-center gap-1.5 mt-3 text-xs text-[#86868b]">
+          <i data-lucide="clock" class="w-3.5 h-3.5 text-[#2997ff]"></i>
+          <span>Hiệu lực còn: <span id="qr-countdown" class="text-white font-mono font-semibold">15:00</span></span>
         </div>
 
-        <!-- Transfer Banking Info Box -->
-        <div class="w-full bg-slate-900/90 rounded-2xl p-4 mt-4 border border-slate-800 text-xs space-y-2.5">
+        <!-- Bank Details -->
+        <div class="w-full bg-[#1d1d1f] rounded-2xl p-4 mt-4 border border-white/[0.06] text-xs space-y-2.5">
           
-          <div class="flex items-center justify-between pb-2 border-b border-slate-800">
-            <span class="text-slate-400">Ngân hàng thụ hưởng:</span>
-            <span id="qr-bank-name" class="font-bold text-white">MB Bank</span>
+          <div class="flex items-center justify-between pb-2 border-b border-white/[0.04]">
+            <span class="text-[#86868b]">Ngân hàng:</span>
+            <span id="qr-bank-name" class="font-semibold text-white">MB Bank</span>
           </div>
 
-          <div class="flex items-center justify-between pb-2 border-b border-slate-800">
-            <span class="text-slate-400">Số tài khoản:</span>
+          <div class="flex items-center justify-between pb-2 border-b border-white/[0.04]">
+            <span class="text-[#86868b]">Số tài khoản:</span>
             <div class="flex items-center gap-2">
-              <span id="qr-account-no" class="font-mono font-bold text-amber-400 text-sm">0987654321</span>
-              <button onclick="copyToClipboard(document.getElementById('qr-account-no').innerText)" class="p-1 rounded text-slate-400 hover:text-white hover:bg-slate-800" title="Sao chép">
+              <span id="qr-account-no" class="font-mono font-bold text-white">0987654321</span>
+              <button onclick="copyToClipboard(document.getElementById('qr-account-no').innerText)" class="p-1 rounded text-[#86868b] hover:text-white" title="Sao chép">
                 <i data-lucide="copy" class="w-3.5 h-3.5"></i>
               </button>
             </div>
           </div>
 
-          <div class="flex items-center justify-between pb-2 border-b border-slate-800">
-            <span class="text-slate-400">Chủ tài khoản:</span>
-            <span id="qr-account-name" class="font-bold text-white uppercase font-mono">NGUYEN VAN A</span>
+          <div class="flex items-center justify-between pb-2 border-b border-white/[0.04]">
+            <span class="text-[#86868b]">Chủ tài khoản:</span>
+            <span id="qr-account-name" class="font-semibold text-white uppercase font-mono">NGUYEN VAN A</span>
           </div>
 
-          <div class="flex items-center justify-between pb-2 border-b border-slate-800">
-            <span class="text-slate-400">Số tiền chính xác:</span>
+          <div class="flex items-center justify-between pb-2 border-b border-white/[0.04]">
+            <span class="text-[#86868b]">Số tiền chính xác:</span>
             <div class="flex items-center gap-2">
-              <span id="checkout-amount" class="font-black text-amber-400 text-base font-mono">790.000 đ</span>
-              <button onclick="copyToClipboard(document.getElementById('checkout-amount').innerText.replace(/[^0-9]/g, ''))" class="p-1 rounded text-slate-400 hover:text-white hover:bg-slate-800" title="Sao chép">
+              <span id="checkout-amount" class="font-bold text-white text-sm font-mono">790.000 đ</span>
+              <button onclick="copyToClipboard(document.getElementById('checkout-amount').innerText.replace(/[^0-9]/g, ''))" class="p-1 rounded text-[#86868b] hover:text-white" title="Sao chép">
                 <i data-lucide="copy" class="w-3.5 h-3.5"></i>
               </button>
             </div>
           </div>
 
           <div class="flex items-center justify-between">
-            <span class="text-slate-400">Nội dung chuyển khoản:</span>
-            <div class="flex items-center gap-2 bg-slate-950 px-2.5 py-1 rounded-lg border border-slate-800">
-              <span id="qr-transfer-memo" class="font-mono font-bold text-emerald-400">SK8888</span>
-              <button onclick="copyToClipboard(document.getElementById('qr-transfer-memo').innerText)" class="p-1 rounded text-slate-400 hover:text-white" title="Sao chép">
+            <span class="text-[#86868b]">Nội dung:</span>
+            <div class="flex items-center gap-2 bg-black px-2.5 py-1 rounded-lg border border-white/[0.06]">
+              <span id="qr-transfer-memo" class="font-mono font-bold text-[#2997ff]">SK8888</span>
+              <button onclick="copyToClipboard(document.getElementById('qr-transfer-memo').innerText)" class="p-1 rounded text-[#86868b] hover:text-white" title="Sao chép">
                 <i data-lucide="copy" class="w-3.5 h-3.5"></i>
               </button>
             </div>
@@ -766,176 +696,159 @@
 
       </div>
 
-      <!-- Customer Contact Form -->
+      <!-- Customer Contact Inputs -->
       <div class="space-y-3">
-        <p class="text-xs font-bold text-slate-300">Thông tin nhận giấy phép và link tải trực tiếp:</p>
+        <p class="text-xs font-semibold text-[#86868b]">Thông tin nhận link tải và bản quyền:</p>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <input 
             type="text" 
             id="checkout-customer-name" 
             placeholder="Họ và tên của bạn" 
-            class="bg-slate-950 border border-slate-800 focus:border-amber-500 rounded-xl px-3.5 py-2.5 text-xs text-slate-200 placeholder-slate-500 focus:outline-none"
+            class="bg-black border border-white/[0.08] focus:border-[#2997ff] rounded-xl px-4 py-2.5 text-xs text-white placeholder-[#86868b] focus:outline-none"
           >
           <input 
             type="email" 
             id="checkout-customer-email" 
-            placeholder="Email nhận file cài đặt (.zip)" 
-            class="bg-slate-950 border border-slate-800 focus:border-amber-500 rounded-xl px-3.5 py-2.5 text-xs text-slate-200 placeholder-slate-500 focus:outline-none"
+            placeholder="Email nhận file .zip" 
+            class="bg-black border border-white/[0.08] focus:border-[#2997ff] rounded-xl px-4 py-2.5 text-xs text-white placeholder-[#86868b] focus:outline-none"
           >
         </div>
       </div>
 
-      <!-- Confirmation Action Button -->
       <div class="pt-2">
         <button 
           onclick="confirmPaymentDone()" 
-          class="w-full py-4 rounded-2xl bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-slate-950 font-black text-sm transition flex items-center justify-center gap-2 shadow-2xl shadow-emerald-500/25"
+          class="w-full py-3.5 rounded-full bg-[#0071e3] hover:bg-[#0077ed] text-white font-semibold text-sm transition flex items-center justify-center gap-2 shadow-lg"
         >
-          <i data-lucide="check-circle" class="w-5 h-5"></i> Tôi Đã Chuyển Khoản Thành Công
+          <i data-lucide="check-circle" class="w-4 h-4"></i> Tôi Đã Chuyển Khoản Thành Công
         </button>
-        <p class="text-[11px] text-slate-500 text-center mt-2.5">Hệ thống sẽ tự động xác thực và mở khóa link tải tức thì.</p>
+        <p class="text-[11px] text-[#86868b] text-center mt-2 font-normal">Hệ thống sẽ tự động xác thực và mở khóa link tải tức thì.</p>
       </div>
 
     </div>
   </div>
 
   <!-- ============================================================== -->
-  <!-- MODAL 3: SUCCESS DELIVERY & ACTIVATION                         -->
+  <!-- MODAL: SUCCESS DELIVERY                                        -->
   <!-- ============================================================== -->
   <div id="success-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/85 backdrop-blur-md p-4 hidden">
-    <div class="bg-slate-900 border border-emerald-500/40 rounded-3xl max-w-lg w-full p-6 sm:p-8 space-y-6 shadow-2xl relative text-center">
+    <div class="bg-[#161617] border border-white/[0.12] rounded-[32px] max-w-lg w-full p-8 space-y-6 shadow-2xl relative text-center">
       
-      <div class="w-16 h-16 rounded-full bg-emerald-500/10 border-2 border-emerald-500/40 text-emerald-400 flex items-center justify-center mx-auto shadow-xl">
-        <i data-lucide="party-popper" class="w-8 h-8"></i>
+      <div class="w-14 h-14 rounded-full bg-emerald-500/10 text-emerald-400 flex items-center justify-center mx-auto">
+        <i data-lucide="check" class="w-7 h-7"></i>
       </div>
 
       <div class="space-y-1">
-        <h3 class="text-2xl font-black text-white">Thanh Toán Thành Công!</h3>
-        <p class="text-xs text-slate-300">
-          Đơn hàng <span id="success-order-id" class="text-amber-400 font-mono font-bold">#SK8888</span> đã được xác nhận.
+        <h3 class="text-2xl font-bold text-white">Thanh Toán Hoàn Tất</h3>
+        <p class="text-xs text-[#86868b]">
+          Đơn hàng <span id="success-order-id" class="text-white font-mono font-bold">#SK8888</span> đã được xác nhận.
         </p>
-        <p class="text-xs text-slate-400">
-          Mã bản quyền VIP: <span id="success-license-key" class="text-emerald-400 font-mono font-bold">SKV-PRO-2026</span>
+        <p class="text-xs text-[#86868b]">
+          Mã bản quyền: <span id="success-license-key" class="text-[#2997ff] font-mono font-bold">SKV-PRO-2026</span>
         </p>
       </div>
 
-      <!-- Direct Download & 1-Click Activation -->
-      <div class="bg-slate-950 p-5 rounded-2xl border border-slate-800 text-left space-y-3">
-        <div class="flex items-center gap-2 text-xs font-bold text-amber-400">
-          <i data-lucide="download" class="w-4 h-4"></i> Tải Xuống Trọn Bộ Kỹ Năng:
-        </div>
+      <div class="bg-black/60 p-5 rounded-2xl border border-white/[0.08] text-left space-y-3">
+        <span class="text-xs font-semibold text-[#86868b] block">Gói Kỹ Năng Đã Sẵn Sàng:</span>
         
         <button 
           onclick="downloadSkillPackage()" 
-          class="w-full py-3.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-black text-xs transition flex items-center justify-center gap-2 shadow-lg shadow-amber-500/20"
+          class="w-full py-3 rounded-full bg-[#0071e3] hover:bg-[#0077ed] text-white font-semibold text-xs transition flex items-center justify-center gap-2 shadow-md"
         >
-          <i data-lucide="archive" class="w-4 h-4"></i> Tải Gói Kỹ Năng (.ZIP) & Tài Liệu
+          <i data-lucide="download" class="w-4 h-4"></i> Tải Trọn Bộ Kỹ Năng (.ZIP)
         </button>
 
-        <div class="pt-2 border-t border-slate-800">
-          <p class="text-[11px] text-slate-400 mb-1 font-semibold">Lệnh nạp tức thời vào Antigravity:</p>
-          <div class="bg-slate-900 p-3 rounded-xl font-mono text-[11px] text-slate-300 flex items-center justify-between border border-slate-800">
+        <div class="pt-2 border-t border-white/[0.06]">
+          <p class="text-[11px] text-[#86868b] mb-1 font-medium">Lệnh nạp vào Antigravity:</p>
+          <div class="bg-[#1d1d1f] p-2.5 rounded-xl font-mono text-[11px] text-white flex items-center justify-between border border-white/[0.04]">
             <span class="truncate mr-2">cmd /c mklink /J "%USERPROFILE%\.gemini\config\skills" "J:\..."</span>
-            <button onclick="copyToClipboard('cmd /c mklink /J &quot;%USERPROFILE%\\.gemini\\config\\skills&quot; &quot;J:\\Other computers\\My Computer (2)\\MTDES23\\CLAUDE SKILL\\Skills_Antigravity\\skills&quot;')" class="text-slate-400 hover:text-white" title="Sao chép">
-              <i data-lucide="copy" class="w-4 h-4"></i>
+            <button onclick="copyToClipboard('cmd /c mklink /J &quot;%USERPROFILE%\\.gemini\\config\\skills&quot; &quot;J:\\Other computers\\My Computer (2)\\MTDES23\\CLAUDE SKILL\\Skills_Antigravity\\skills&quot;')" class="text-[#86868b] hover:text-white" title="Sao chép">
+              <i data-lucide="copy" class="w-3.5 h-3.5"></i>
             </button>
           </div>
         </div>
       </div>
 
-      <button 
-        onclick="closeAllModals(); setTab('projects');" 
-        class="w-full py-3.5 rounded-2xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-bold transition"
-      >
-        Quay Lại Cửa Hàng
+      <button onclick="closeAllModals(); setTab('projects');" class="w-full py-3 rounded-full bg-white/10 hover:bg-white/20 text-white text-xs font-semibold transition">
+        Tiếp tục khám phá
       </button>
 
     </div>
   </div>
 
   <!-- ============================================================== -->
-  <!-- MODAL 4: SELLER ADMIN BANK CONFIGURATION                       -->
+  <!-- MODAL: SELLER BANK SETTINGS                                    -->
   <!-- ============================================================== -->
-  <div id="bank-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/85 backdrop-blur-sm p-4 hidden">
-    <div class="bg-slate-900 border border-slate-800 rounded-3xl max-w-md w-full p-6 space-y-5 shadow-2xl relative">
+  <div id="bank-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-md p-4 hidden">
+    <div class="bg-[#161617] border border-white/[0.12] rounded-[32px] max-w-md w-full p-7 space-y-5 shadow-2xl relative">
       
-      <div class="flex items-center justify-between border-b border-slate-800 pb-3">
-        <div class="flex items-center gap-2">
-          <i data-lucide="wallet" class="w-5 h-5 text-amber-400"></i>
-          <h3 class="text-base font-bold text-white">Cấu Hình Tài Khoản Nhận Tiền QR</h3>
-        </div>
-        <button data-modal-close class="p-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white transition">
+      <div class="flex items-center justify-between border-b border-white/[0.08] pb-3">
+        <h3 class="text-base font-bold text-white">Cấu Hình Tài Khoản Nhận Tiền</h3>
+        <button data-modal-close class="p-2 rounded-full hover:bg-white/10 text-[#86868b] hover:text-white transition">
           <i data-lucide="x" class="w-4 h-4"></i>
         </button>
       </div>
 
-      <p class="text-xs text-slate-400 leading-relaxed font-light">
-        Điền thông tin tài khoản ngân hàng của bạn. Khi khách hàng quét mã VietQR, tiền sẽ chuyển thẳng vào tài khoản này!
+      <p class="text-xs text-[#86868b] leading-relaxed">
+        Nhập số tài khoản của bạn. Mọi mã VietQR trên website sẽ tự động chuyển tiền trực tiếp về tài khoản này.
       </p>
 
       <div class="space-y-3">
         <div>
-          <label class="text-xs font-semibold text-slate-300 block mb-1">Ngân hàng:</label>
-          <select id="cfg-bank-id" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-slate-200 focus:outline-none focus:border-amber-500">
-            <!-- Populated dynamically -->
+          <label class="text-xs font-semibold text-[#86868b] block mb-1">Ngân hàng:</label>
+          <select id="cfg-bank-id" class="w-full bg-black border border-white/[0.08] rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-[#2997ff]">
+            <!-- Dynamic options -->
           </select>
         </div>
 
         <div>
-          <label class="text-xs font-semibold text-slate-300 block mb-1">Số tài khoản ngân hàng:</label>
+          <label class="text-xs font-semibold text-[#86868b] block mb-1">Số tài khoản:</label>
           <input 
             type="text" 
             id="cfg-account-no" 
             placeholder="Ví dụ: 0987654321" 
-            class="w-full bg-slate-950 border border-slate-800 focus:border-amber-500 rounded-xl px-3 py-2 text-xs text-slate-200 font-mono focus:outline-none"
+            class="w-full bg-black border border-white/[0.08] focus:border-[#2997ff] rounded-xl px-3 py-2 text-xs text-white font-mono focus:outline-none"
           >
         </div>
 
         <div>
-          <label class="text-xs font-semibold text-slate-300 block mb-1">Tên chủ tài khoản (In hoa không dấu):</label>
+          <label class="text-xs font-semibold text-[#86868b] block mb-1">Tên chủ tài khoản (In hoa không dấu):</label>
           <input 
             type="text" 
             id="cfg-account-name" 
             placeholder="Ví dụ: NGUYEN VAN A" 
-            class="w-full bg-slate-950 border border-slate-800 focus:border-amber-500 rounded-xl px-3 py-2 text-xs text-slate-200 uppercase font-mono focus:outline-none"
+            class="w-full bg-black border border-white/[0.08] focus:border-[#2997ff] rounded-xl px-3 py-2 text-xs text-white uppercase font-mono focus:outline-none"
           >
         </div>
       </div>
 
       <div class="pt-2">
-        <button 
-          onclick="saveBankSettings()" 
-          class="w-full py-3.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs transition shadow-lg shadow-amber-500/20"
-        >
-          Lưu Cấu Hình Ngân Hàng
+        <button onclick="saveBankSettings()" class="w-full py-3 rounded-full bg-[#0071e3] hover:bg-[#0077ed] text-white font-semibold text-xs transition shadow-md">
+          Lưu Cấu Hình
         </button>
       </div>
 
     </div>
   </div>
 
-  <!-- FOOTER -->
-  <footer class="border-t border-slate-800 bg-slate-950 py-14 mt-20 text-xs text-slate-400">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+  <!-- APPLE MINIMALIST FOOTER -->
+  <footer class="border-t border-white/[0.08] bg-[#161617] py-14 mt-20 text-xs text-[#86868b]">
+    <div class="max-w-[1024px] mx-auto px-4 sm:px-6 flex flex-col md:flex-row items-center justify-between gap-6">
       
-      <div class="flex items-center gap-3">
-        <div class="w-8 h-8 rounded-xl bg-amber-500 flex items-center justify-center text-slate-950 font-bold">
-          <i data-lucide="box" class="w-4 h-4"></i>
-        </div>
-        <div>
-          <span class="font-bold text-white font-mono text-sm">SKILLVAULT AI</span>
-          <p class="text-[11px] text-slate-500">Nền tảng thương mại kỹ năng AI Agent hàng đầu</p>
-        </div>
+      <div class="flex items-center gap-2.5">
+        <i data-lucide="cpu" class="w-4 h-4 text-white"></i>
+        <span class="font-semibold text-white">SkillVault AI</span>
+        <span class="text-[#86868b]">| Thiết kế theo ngôn ngữ Apple Human Interface Guidelines.</span>
       </div>
 
-      <div class="flex flex-wrap items-center gap-6 text-slate-400 font-medium">
-        <a href="#projects-view" onclick="setTab('projects')" class="hover:text-amber-400 transition">Gói Dự Án</a>
-        <a href="#categories-view" onclick="setTab('categories')" class="hover:text-amber-400 transition">Chuyên Mục</a>
-        <a href="#skills-view" onclick="setTab('skills')" class="hover:text-amber-400 transition">Kho 2,821 Kỹ Năng</a>
-        <a href="#guide-view" onclick="setTab('guide')" class="hover:text-amber-400 transition">Hướng Dẫn Cài Đặt</a>
+      <div class="flex flex-wrap items-center gap-6 text-[#86868b]">
+        <a href="#projects-view" onclick="setTab('projects')" class="hover:text-white transition">Theo Dự Án</a>
+        <a href="#categories-view" onclick="setTab('categories')" class="hover:text-white transition">Chuyên Mục</a>
+        <a href="#skills-view" onclick="setTab('skills')" class="hover:text-white transition">2,821 Kỹ Năng</a>
+        <a href="#guide-view" onclick="setTab('guide')" class="hover:text-white transition">Cài Đặt</a>
       </div>
 
-      <p class="text-slate-500">© 2026 SKILLVAULT AI. Tích hợp thanh toán VietQR chuẩn Napas.</p>
+      <p class="text-[#6e6e73]">Copyright © 2026 MTDES23. Cổng thanh toán VietQR chuẩn Napas.</p>
 
     </div>
   </footer>
