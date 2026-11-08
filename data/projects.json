@@ -5,13 +5,15 @@
     "slug": "xspeedvn-supercar-formula",
     "category": "video-media",
     "badge": "Bán Chạy Nhất",
+    "author": "X SPEED VN & Hải Đăng",
     "rating": 5.0,
-    "reviewsCount": 128,
+    "reviewsCount": 142,
     "price": 790000,
     "originalPrice": 1490000,
     "discount": "47%",
-    "summary": "Công thức và bộ công cụ sản xuất video ngắn tài liệu siêu xe / xe thể thao 9:16 chuẩn điện ảnh triệu view (F40 & R34 Formula), tích hợp tự động hóa đăng TikTok Studio.",
-    "description": "Gói giải pháp hoàn chỉnh từ A-Z dành cho các nhà sáng tạo nội dung xe cộ, tốc độ và công nghệ cơ khí. Kế thừa toàn bộ kịch bản 6 hồi kịch tính (Hook kỷ lục, 3-Split lịch sử, Blueprint Grid cơ khí, Blur-Bar Cockpit, Danger Motorsport, Studio Outro), hệ thống âm thanh 4 tầng chuẩn -14 LUFS, phụ đề Frosted Glass Active-Word Karaoke và bot tự động upload/lên lịch TikTok Studio.",
+    "roi": "Rút ngắn 90% thời gian dựng video, đạt mốc 100k view trong 7 ngày đầu",
+    "summary": "Công thức và bộ công cụ sản xuất video ngắn tài liệu siêu xe 9:16 chuẩn điện ảnh triệu view (F40 & R34 Formula), tích hợp bot tự động hóa đăng TikTok Studio.",
+    "description": "Gói giải pháp hoàn chỉnh từ A-Z dành cho các nhà sáng tạo nội dung xe cộ, tốc độ và công nghệ cơ khí. Kế thừa toàn bộ kịch bản 6 hồi kịch tính (Extreme Hook, 3-Split lịch sử, Blueprint Grid cơ khí, Blur-Bar Cockpit, Danger Motorsport, Studio Outro), hệ thống âm thanh 4 tầng chuẩn -14 LUFS, phụ đề Frosted Glass Active-Word Karaoke và bot tự động upload/lên lịch TikTok Studio.",
     "skills": [
       "xspeedvn-supercar-video",
       "xspeedvn-tiktok-publisher",
@@ -21,10 +23,19 @@
       "sfx-thu-vien"
     ],
     "highlights": [
-      "Kịch bản 6 hồi F40 & R34 Formula đã được chứng minh triệu view",
-      "Safe-zone 9:16 y=1510 chống tràn và che khuất giao diện TikTok",
-      "Tự động cắt khoảng lặng và khớp giọng đọc VieNeu-TTS Ultra-HD",
-      "Công cụ tự động hóa upload và lên lịch TikTok Studio qua Selenium/CLI"
+      "Kịch bản 6 hồi F40 & R34 Formula đã được chứng minh qua 50+ video triệu view",
+      "Safe-zone 9:16 y=1510 chống tràn và che khuất giao diện TikTok/Reels",
+      "Tự động cắt khoảng lặng và khớp giọng đọc VieNeu-TTS Ultra-HD 48kHz",
+      "Bộ công cụ tự động upload và lên lịch TikTok Studio qua Selenium/CLI"
+    ],
+    "toolsNeeded": ["Python 3.10+", "FFmpeg", "Faster-Whisper", "Node.js"],
+    "blueprint": [
+      "Hồi 1 (0-10s): Extreme Hook kỷ lục / cấm đoán",
+      "Hồi 2 (10-25s): 3-Split Screen bối cảnh lịch sử",
+      "Hồi 3 (25-40s): Technical Blueprint Grid cơ khí",
+      "Hồi 4 (40-52s): Blur-Bar buồng lái số hóa",
+      "Hồi 5 (52-65s): Danger Motorsport đường đua",
+      "Hồi 6 (65-80s): Studio Outro CTA chuyển đổi"
     ],
     "icon": "zap",
     "color": "from-amber-500 to-red-600"
@@ -35,12 +46,14 @@
     "slug": "ngoi-den-huyen-thoai-video",
     "category": "video-media",
     "badge": "Hot Xu Hướng",
+    "author": "Ngôi Đền Huyền Thoại Studio",
     "rating": 5.0,
-    "reviewsCount": 114,
+    "reviewsCount": 126,
     "price": 690000,
     "originalPrice": 1290000,
     "discount": "46%",
-    "summary": "Quy chuẩn sản xuất video tài liệu bóng đá kịch tính chuẩn kênh Ngôi Đền Huyền Thoại với đồ họa Breaking Plate Navy và kịch bản tranh luận GOAT đỉnh cao.",
+    "roi": "Tạo ra các cuộc tranh luận GOAT sôi nổi, trung bình 2.500+ bình luận/video",
+    "summary": "Quy chuẩn sản xuất video tài liệu bóng đá kịch tính chuẩn kênh Ngôi Đền Huyền Thoại với đồ họa Breaking Plate Navy và kịch bản tranh luận đỉnh cao.",
     "description": "Bộ kỹ năng độc quyền tái hiện phong cách sản xuất của kênh bóng đá hàng đầu. Sở hữu kịch bản 6 hồi phân tầng (Shocking Hook 3s đầu, Golden Award Poster, Frosted Glass Leaderboard, Head-to-Head Scroll so kè kỷ lục, Lưới 9 ô mùa giải 3x3 Trophy Grid, Di sản bất tử Outro), kết hợp phụ đề Karaoke chữ vàng pop-in và âm thanh bình luận viên hào sảng.",
     "skills": [
       "ngoi-den-huyen-thoai-video",
@@ -51,10 +64,19 @@
       "capcut-video-editing"
     ],
     "highlights": [
-      "Hệ thống đồ họa 9:16 Breaking News Plate sắc nét",
+      "Hệ thống đồ họa 9:16 Breaking News Plate sắc nét với nền xanh Navy",
       "Cấu trúc kịch bản kích hoạt tranh cãi văn minh & giữ chân người xem 85s",
-      "Phụ đề Karaoke chữ vàng active-word nổi bật",
-      "Âm thanh 4 tầng chuẩn BLV thể thao với tiếng reo hò sân vận động"
+      "Phụ đề Karaoke chữ vàng active-word pop-in từng từ",
+      "Âm thanh 4 tầng chuẩn BLV thể thao với tiếng reo hò sân cỏ hào hùng"
+    ],
+    "toolsNeeded": ["Python 3.8+", "FFmpeg", "PhoWhisper / Faster-Whisper", "CapCut PC"],
+    "blueprint": [
+      "Hồi 1 (0-12s): Shocking Hook tin nóng nghịch lý",
+      "Hồi 2 (12-25s): Golden Award Poster công bố danh hiệu",
+      "Hồi 3 (25-40s): Frosted Glass Leaderboard bảng xếp hạng",
+      "Hồi 4 (40-52s): Head-to-Head Scroll so kè kỳ phùng",
+      "Hồi 5 (52-70s): 3x3 Trophy Grid mùa giải hoàng kim",
+      "Hồi 6 (70-85s): Immortal Legacy Outro vinh danh"
     ],
     "icon": "trophy",
     "color": "from-blue-600 to-indigo-800"
@@ -65,11 +87,13 @@
     "slug": "mrt-keyword-pack",
     "category": "video-media",
     "badge": "Siêu Phẩm",
+    "author": "Phúc Anh MRT",
     "rating": 5.0,
-    "reviewsCount": 182,
+    "reviewsCount": 198,
     "price": 990000,
     "originalPrice": 1890000,
     "discount": "48%",
+    "roi": "Thay thế hoàn toàn 1 Editor chuyên nghiệp, dựng video tự động chỉ bằng 1 câu lệnh",
     "summary": "Bộ công cụ tự động hóa dựng video bằng 169 keyword hiệu ứng độc quyền, 62 mã nguồn chạy ngay, tương thích hoàn hảo Antigravity & Claude Code.",
     "description": "Chỉ cần đưa vào 1 video người nói hoặc file giọng đọc, AI sẽ tự động nghe lời, cắt khoảng lặng, chọn hiệu ứng hợp từng câu, viết chữ cho hiệu ứng (text-behind, punch-headline, progress-bar, chat-bubble, calendar-flip...) và xuất video 9:16 sẵn sàng đăng tải.",
     "skills": [
@@ -85,6 +109,13 @@
       "Tự động tính toán vị trí tránh che mặt diễn giả",
       "Hỗ trợ cả trường hợp chỉ có file giọng đọc trên nền màu tối giản"
     ],
+    "toolsNeeded": ["Python 3.10+", "FFmpeg", "OpenAI Whisper", "Claude Code / Antigravity"],
+    "blueprint": [
+      "Hiệu ứng Chữ: text-behind, punch-headline, kinetic-pop",
+      "Hiệu ứng Khung quay: rec-frame, face-scan, cinema-bars",
+      "Hiệu ứng Số liệu: glass-graph, glass-counter, calendar-flip",
+      "Hiệu ứng App: chat-bubble, comment-pop, bank-notify"
+    ],
     "icon": "sparkles",
     "color": "from-purple-600 to-pink-600"
   },
@@ -94,11 +125,13 @@
     "slug": "remotion-video-automation",
     "category": "video-media",
     "badge": "Lập Trình Viên",
+    "author": "Hải Đăng & Remotion Core",
     "rating": 4.9,
-    "reviewsCount": 96,
+    "reviewsCount": 105,
     "price": 890000,
     "originalPrice": 1690000,
     "discount": "47%",
+    "roi": "Sản xuất 100 video ngắn mỗi ngày theo dạng batch rendering tự động",
     "summary": "Quy trình biến video thô thành sản phẩm hoàn chỉnh bằng mã React/Remotion: bóc tách lời, cắt ậm ừ, nhận diện thương hiệu hiện logo và căn chỉnh micro.",
     "description": "Giải pháp hậu kỳ lập trình bằng React. Tự động hóa bóc tách transcript từng từ bằng Faster-Whisper, cắt khoảng lặng và từ đệm, tạo Remotion composition với phụ đề karaoke mượt mà, tự hiện logo hãng khi diễn giả nhắc tên thương hiệu.",
     "skills": [
@@ -115,6 +148,14 @@
       "Tự động phóng to thu nhỏ (Face Zoom Punch-in) bám theo khuôn mặt",
       "Tự động chèn logo SVG khi phát hiện thương hiệu trong câu nói"
     ],
+    "toolsNeeded": ["Node.js 18+", "Remotion", "FFmpeg", "Python 3.8+"],
+    "blueprint": [
+      "Bước 1: Bóc tách transcript từng từ bằng Faster-Whisper",
+      "Bước 2: Lập kế hoạch cắt và duyệt trước",
+      "Bước 3: Cắt video frame-exact và dời mốc từ",
+      "Bước 4: Dựng composition Remotion (Sub + Logo + SFX)",
+      "Bước 5: Render video qua CLI hoặc Remotion Studio"
+    ],
     "icon": "code",
     "color": "from-cyan-500 to-blue-700"
   },
@@ -124,11 +165,13 @@
     "slug": "vieneu-voice-studio",
     "category": "audio-voice",
     "badge": "Độc Quyền AI",
+    "author": "VieNeu Research Team",
     "rating": 5.0,
-    "reviewsCount": 142,
+    "reviewsCount": 158,
     "price": 850000,
     "originalPrice": 1590000,
     "discount": "46%",
+    "roi": "Tiết kiệm 100% chi phí thuê diễn viên lồng tiếng (Voice Talent)",
     "summary": "Bộ công cụ chuyển văn bản thành giọng nói tiếng Việt Ultra-HD 48 kHz on-device, 25 giọng 3 miền, clone giọng từ mẫu 3s và chèn cảm xúc phi ngôn từ.",
     "description": "Kỹ năng làm chủ mô hình VieNeu-TTS v3 Turbo và Nano chạy trực tiếp bằng CPU/GPU. Tạo giọng đọc tự nhiên chuẩn 3 miền Bắc - Trung - Nam, nhân bản giọng nói tức thì (Zero-shot Voice Clone) từ đoạn ghi âm 3-8s, tích hợp cảm xúc [cười], [thở dài], [hắng giọng], server OpenAI API và lồng tiếng tự động từ file SRT.",
     "skills": [
@@ -145,6 +188,13 @@
       "Chèn trực tiếp tag cảm xúc [cười], [thở dài] chân thực",
       "Cung cấp REST API server tương thích chuẩn OpenAI Audio Speech"
     ],
+    "toolsNeeded": ["Python 3.10+", "PyTorch / ONNX Runtime", "CUDA (tùy chọn)"],
+    "blueprint": [
+      "Bộ giọng: 25 giọng phân tầng Bắc - Trung - Nam",
+      "Voice Clone: Trích xuất speaker embedding 192 chiều",
+      "Tốc độ: Streaming chunk đầu tiên sau ~115ms trên GPU",
+      "Tích hợp: Server OpenAI API thay thế cho LiveKit / Vercel"
+    ],
     "icon": "mic",
     "color": "from-emerald-500 to-teal-700"
   },
@@ -154,11 +204,13 @@
     "slug": "multi-topic-news-digest",
     "category": "marketing",
     "badge": "Viral Studio",
+    "author": "J2TEAM & Media Team",
     "rating": 4.9,
-    "reviewsCount": 89,
+    "reviewsCount": 97,
     "price": 490000,
     "originalPrice": 990000,
     "discount": "50%",
+    "roi": "Duy trì Fanpage/Group đều đặn 3 album điểm tin mỗi ngày tự động",
     "summary": "Dây chuyền sản xuất album ảnh điểm tin 1080x1080 Full HD chuẩn Facebook/Threads cho 8 chủ đề (Tech, Crypto, Finance, Auto, Showbiz, Sports, Gaming, Life).",
     "description": "Kế thừa quy chuẩn từ J2TEAM News Studio. Bao gồm thuật toán cân bằng dòng chống rớt chữ (chống orphan word), ruy băng nhận diện thương hiệu 45°, bộ lọc làm nét vi mô Unsharp Mask, cùng văn phong báo chí hiện đại sắc sảo.",
     "skills": [
@@ -174,6 +226,13 @@
       "Thuật toán chống rớt chữ và khóa cụm số + đơn vị đi liền nhau",
       "Quy chuẩn caption phân tầng giữ chân người đọc"
     ],
+    "toolsNeeded": ["Python 3.8+", "Pillow", "RSS Feeds / Web Scraper"],
+    "blueprint": [
+      "Preset 1: Công nghệ & An ninh mạng (Đỏ J2TEAM #9e1414)",
+      "Preset 2: Kinh tế - Tài chính (Xanh Navy #0284c7)",
+      "Preset 3: Tiền mã hóa & Web3 (Xanh ngọc #059669)",
+      "Preset 4: Siêu xe & Đua xe (Đỏ cờ #dc2626)"
+    ],
     "icon": "newspaper",
     "color": "from-orange-500 to-rose-600"
   },
@@ -183,11 +242,13 @@
     "slug": "agency-agents-nexus",
     "category": "agents",
     "badge": "Enterprise AI",
+    "author": "Agency Agents & NEXUS",
     "rating": 5.0,
-    "reviewsCount": 204,
+    "reviewsCount": 215,
     "price": 1290000,
     "originalPrice": 2490000,
     "discount": "48%",
+    "roi": "Tương đương sở hữu đội ngũ 18 phòng ban với chi phí vận hành 0 đồng",
     "summary": "Kho 268 chuyên gia AI thực chiến phân bổ qua 18 phòng ban cùng khung điều phối đa tác tử NEXUS 7 pha tự động hóa toàn diện doanh nghiệp.",
     "description": "Biến Antigravity thành một Agency toàn năng với 66 kỹ sư công nghệ, 37 chuyên gia Marketing, 12 chuyên gia Bảo mật, 10 nhà thiết kế UI/UX, 9 chuyên gia kiểm thử chống ảo tưởng nghiệm thu... Hoạt động theo quy trình khép kín Dev+QA loops.",
     "skills": [
@@ -201,6 +262,14 @@
       "Khung điều phối NEXUS 7 pha từ khám phá, kiến trúc đến kiểm thử",
       "Cơ chế Reality Checker khắc tinh của ảo tưởng nghiệm thu"
     ],
+    "toolsNeeded": ["Antigravity", "Claude Code", "Python / Node.js"],
+    "blueprint": [
+      "Pha 1: Khám phá bài toán & Phân tích yêu cầu",
+      "Pha 2: Thiết kế kiến trúc & Lập spec",
+      "Pha 3: Phân rã công việc cho các phòng ban",
+      "Pha 4: Dev Loops thực thi song song",
+      "Pha 5: Reality Checker kiểm thử độc lập"
+    ],
     "icon": "users",
     "color": "from-violet-600 to-indigo-900"
   },
@@ -209,12 +278,14 @@
     "name": "Vũ Trụ 3D AI & Kỹ Xảo Điện Ảnh Tương Tác",
     "slug": "3d-ai-vfx-universe",
     "category": "3d-vfx",
-    "badge": "Công Nghệ Đỉnh Cao",
+    "badge": "Đồ Họa Đỉnh Cao",
+    "author": "Blender & Generative VFX Labs",
     "rating": 4.9,
-    "reviewsCount": 77,
+    "reviewsCount": 84,
     "price": 990000,
     "originalPrice": 1990000,
     "discount": "50%",
+    "roi": "Tạo model 3D chuẩn game và VFX điện ảnh trong vài phút thay vì vài tuần",
     "summary": "Bộ kỹ năng tạo mô hình 3D từ ảnh/văn bản (Hyper3D Rodin, Meshy, Tripo), trọn bộ Blender Pro Toolkit và các mô hình sinh video kỹ xảo Kling, Pika, PixVerse.",
     "description": "Giải pháp toàn năng cho 3D Artist và Video Creator. Tự động hóa tạo 3D mesh, texture PBR, auto-rigging nhân vật, chuẩn bị file in 3D thực tế, phối hợp cùng các bộ hiệu ứng video AI chuyển động mạnh mẽ.",
     "skills": [
@@ -232,6 +303,13 @@
       "Bộ cẩm nang Blender geometry nodes, shader materials và cinematic render",
       "Tích hợp các hiệu ứng bùng nổ, tan biến, biến đổi hình dạng bằng Kling và Pika"
     ],
+    "toolsNeeded": ["Blender 4.0+", "Python", "Hyper3D API / Meshy API"],
+    "blueprint": [
+      "Module 1: Image-to-3D với Rodin Gen-2.5 API",
+      "Module 2: Tự động retopology & Rigging",
+      "Module 3: Shader PBR & Cinematic Lighting trong Blender",
+      "Module 4: Kỹ xảo AI Kling & PixVerse"
+    ],
     "icon": "box",
     "color": "from-blue-500 to-emerald-600"
   },
@@ -241,11 +319,13 @@
     "slug": "master-vault-all-skills",
     "category": "all",
     "badge": "Trọn Đời VIP",
+    "author": "Antigravity Global Guild",
     "rating": 5.0,
-    "reviewsCount": 350,
+    "reviewsCount": 380,
     "price": 2990000,
     "originalPrice": 9900000,
     "discount": "70%",
+    "roi": "Trang bị trọn đời toàn bộ vũ khí AI mạnh nhất thế giới cho mọi dự án",
     "summary": "Sở hữu vĩnh viễn toàn bộ kho vũ khí 2,821 kỹ năng: 119 skills media thực chiến Việt Nam + 2,702 skills bảo mật, lập trình, đám mây, marketing quốc tế.",
     "description": "Gói cao cấp nhất dành cho Agency, lập trình viên chuyên nghiệp và Content Creator muốn trang bị vũ khí tối thượng cho AI. Bao gồm toàn bộ script tự động hóa, thư viện 585 âm thanh bản quyền, công cụ dựng video, model TTS, 268 chuyên gia Agency và cập nhật trọn đời.",
     "skills": [
@@ -260,6 +340,12 @@
       "Bao gồm toàn bộ mã nguồn Python, Node.js, Shell script, âm thanh WAV/MP3",
       "Nhận cập nhật kỹ năng mới vĩnh viễn không phụ phí",
       "Hỗ trợ kỹ thuật 1-1 cài đặt và tinh chỉnh workflow"
+    ],
+    "toolsNeeded": ["Antigravity", "Claude Code", "Python 3.10+", "Node.js 18+"],
+    "blueprint": [
+      "Kho lưu trữ vĩnh viễn trên máy tính cục bộ",
+      "Cập nhật hàng tháng từ cộng đồng mã nguồn mở toàn cầu",
+      "Đặc quyền truy cập kho tài liệu và prompt mẫu bí mật"
     ],
     "icon": "crown",
     "color": "from-yellow-500 via-amber-600 to-red-600"
