@@ -249,8 +249,8 @@
           <p class="text-xs text-[#86868b] mt-1">SFX & BGM Bản Quyền 5★</p>
         </div>
         <div>
-          <span class="text-3xl sm:text-4xl font-bold text-[#d82d8b] tracking-tight font-mono">MoMo</span>
-          <p class="text-xs text-[#86868b] mt-1">0336779222 (1 Chạm)</p>
+          <span class="text-3xl sm:text-4xl font-bold text-[#2997ff] tracking-tight font-mono">VietQR</span>
+          <p class="text-xs text-[#86868b] mt-1">MoMo & Techcombank</p>
         </div>
       </div>
 
@@ -599,28 +599,19 @@
       </button>
 
       <div class="text-center space-y-1">
-        <span class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-[11px] font-semibold bg-[#d82d8b]/15 text-[#f5f5f7] border border-[#d82d8b]/30">
-          <img src="https://cdn.vietqr.io/img/momo.png" alt="MoMo" class="w-3.5 h-3.5 object-contain"> Cổng Thanh Toán Duy Nhất: Ví MoMo
+        <span class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-[11px] font-semibold bg-white/10 text-[#f5f5f7] border border-white/[0.12]">
+          <i data-lucide="shield-check" class="w-3.5 h-3.5 text-[#2997ff]"></i> Cổng Thanh Toán Trực Tuyến
         </span>
-        <h3 class="text-2xl font-bold text-white tracking-tight">Quét Mã MoMo Để Mở Khóa</h3>
+        <h3 class="text-2xl font-bold text-white tracking-tight">Quét Mã QR Để Mở Khóa</h3>
         <p class="text-xs text-[#86868b]">Mã đơn hàng: <span id="checkout-order-id" class="text-white font-mono font-bold">#SK8888</span></p>
       </div>
 
-      <!-- MoMo Account Card -->
-      <div class="flex items-center justify-between bg-gradient-to-r from-[#a50064]/25 to-[#d82d8b]/15 border border-[#d82d8b]/40 rounded-2xl p-4 shadow-lg">
-        <div class="flex items-center gap-3">
-          <img src="https://cdn.vietqr.io/img/momo.png" alt="MoMo" class="w-10 h-10 rounded-2xl object-contain bg-white p-1.5 shrink-0 shadow-md">
-          <div>
-            <div class="flex items-center gap-2">
-              <span class="text-sm font-bold text-white">Ví MoMo Cá Nhân</span>
-              <span class="text-[9px] font-bold uppercase bg-[#d82d8b] text-white px-2 py-0.5 rounded-full">Duy Nhất</span>
-            </div>
-            <p class="text-xs text-[#f5f5f7] font-mono mt-0.5">SĐT: <strong class="text-[#2997ff] text-sm">0336779222</strong></p>
-          </div>
+      <!-- Payment Method Selector: MoMo & Techcombank -->
+      <div>
+        <label class="text-[11px] font-semibold text-[#86868b] uppercase tracking-wider block mb-2">Chọn phương thức thanh toán:</label>
+        <div id="checkout-bank-selector" class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <!-- Rendered dynamically by app.js: MoMo & Techcombank -->
         </div>
-        <button onclick="copyToClipboard('0336779222')" class="px-3.5 py-2 rounded-full bg-[#d82d8b] hover:bg-[#e03b9b] text-white text-xs font-semibold transition flex items-center gap-1.5 shadow-md shrink-0">
-          <i data-lucide="copy" class="w-3.5 h-3.5"></i> Sao chép SĐT
-        </button>
       </div>
 
       <!-- QR Display Frame -->
@@ -628,7 +619,7 @@
         
         <div class="relative w-64 h-64 bg-white p-3.5 rounded-2xl shadow-xl flex items-center justify-center overflow-hidden">
           <div class="scanner-line"></div>
-          <img id="vietqr-image" src="" alt="Mã QR MoMo" class="w-full h-full object-contain">
+          <img id="vietqr-image" src="" alt="Mã QR Thanh Toán" class="w-full h-full object-contain">
         </div>
 
         <div class="flex items-center gap-1.5 mt-3 text-xs text-[#86868b]">
@@ -640,14 +631,14 @@
         <div class="w-full bg-[#1d1d1f] rounded-2xl p-4 mt-4 border border-white/[0.06] text-xs space-y-2.5">
           
           <div class="flex items-center justify-between pb-2 border-b border-white/[0.04]">
-            <span class="text-[#86868b]">Hình thức thanh toán:</span>
+            <span class="text-[#86868b]">Kênh thanh toán:</span>
             <span id="qr-bank-name" class="font-semibold text-white flex items-center gap-1.5">
-              <img src="https://cdn.vietqr.io/img/momo.png" alt="MoMo" class="w-3.5 h-3.5 object-contain"> Ví Điện Tử MoMo
+              <!-- Dynamic -->
             </span>
           </div>
 
           <div class="flex items-center justify-between pb-2 border-b border-white/[0.04]">
-            <span class="text-[#86868b]">Số điện thoại MoMo:</span>
+            <span id="qr-method-label" class="text-[#86868b]">Số tài khoản / SĐT:</span>
             <div class="flex items-center gap-2">
               <span id="qr-account-no" class="font-mono font-bold text-white text-sm">0336779222</span>
               <button onclick="copyToClipboard(document.getElementById('qr-account-no').innerText)" class="p-1 rounded text-[#86868b] hover:text-white" title="Sao chép">
@@ -657,8 +648,8 @@
           </div>
 
           <div class="flex items-center justify-between pb-2 border-b border-white/[0.04]">
-            <span class="text-[#86868b]">Chủ tài khoản ví:</span>
-            <span id="qr-account-name" class="font-semibold text-white uppercase font-mono">MTDES23</span>
+            <span class="text-[#86868b]">Chủ tài khoản:</span>
+            <span id="qr-account-name" class="font-semibold text-white uppercase font-mono">THACH MINH TRI</span>
           </div>
 
           <div class="flex items-center justify-between pb-2 border-b border-white/[0.04]">
@@ -773,7 +764,7 @@
       
       <div class="flex items-center justify-between border-b border-white/[0.08] pb-3">
         <h3 class="text-base font-bold text-white flex items-center gap-2">
-          <img src="https://cdn.vietqr.io/img/momo.png" alt="MoMo" class="w-5 h-5 object-contain"> Cấu Hình Ví MoMo Nhận Tiền
+          <i data-lucide="wallet" class="w-5 h-5 text-[#2997ff]"></i> Cấu Hình Nhận Tiền (MoMo & TCB)
         </h3>
         <button data-modal-close class="p-2 rounded-full hover:bg-white/10 text-[#86868b] hover:text-white transition">
           <i data-lucide="x" class="w-4 h-4"></i>
@@ -781,42 +772,44 @@
       </div>
 
       <p class="text-xs text-[#86868b] leading-relaxed">
-        Website áp dụng phương thức thanh toán duy nhất qua Ví MoMo. Mọi mã QR trên website sẽ tự động chuyển tiền trực tiếp về số điện thoại này.
+        Website hỗ trợ 2 kênh nhận tiền chính thức: Ví MoMo & Techcombank. Tự động sinh mã VietQR chuyển thẳng về tài khoản chủ shop.
       </p>
 
       <div class="space-y-3">
         <div>
-          <label class="text-xs font-semibold text-[#86868b] block mb-1">Phương thức nhận tiền:</label>
-          <div class="flex items-center gap-2 bg-black border border-white/[0.08] rounded-xl px-3 py-2 text-xs text-white">
-            <img src="https://cdn.vietqr.io/img/momo.png" alt="MoMo" class="w-4 h-4 object-contain">
-            <span class="font-medium text-[#f5f5f7]">Ví Điện Tử MoMo (Duy nhất)</span>
-          </div>
-        </div>
-
-        <div>
-          <label class="text-xs font-semibold text-[#86868b] block mb-1">Số điện thoại MoMo nhận tiền:</label>
+          <label class="text-xs font-semibold text-[#86868b] block mb-1">Số điện thoại Ví MoMo:</label>
           <input 
             type="text" 
-            id="cfg-account-no" 
+            id="cfg-momo-no" 
             placeholder="0336779222" 
             class="w-full bg-black border border-white/[0.08] focus:border-[#d82d8b] rounded-xl px-3 py-2 text-xs text-white font-mono focus:outline-none"
           >
         </div>
 
         <div>
-          <label class="text-xs font-semibold text-[#86868b] block mb-1">Tên chủ ví MoMo (In hoa không dấu):</label>
+          <label class="text-xs font-semibold text-[#86868b] block mb-1">Số tài khoản Techcombank (TCB):</label>
+          <input 
+            type="text" 
+            id="cfg-tcb-no" 
+            placeholder="19035505367013" 
+            class="w-full bg-black border border-white/[0.08] focus:border-[#e01a22] rounded-xl px-3 py-2 text-xs text-white font-mono focus:outline-none"
+          >
+        </div>
+
+        <div>
+          <label class="text-xs font-semibold text-[#86868b] block mb-1">Tên chủ tài khoản (In hoa không dấu):</label>
           <input 
             type="text" 
             id="cfg-account-name" 
-            placeholder="MTDES23" 
-            class="w-full bg-black border border-white/[0.08] focus:border-[#d82d8b] rounded-xl px-3 py-2 text-xs text-white uppercase font-mono focus:outline-none"
+            placeholder="THACH MINH TRI" 
+            class="w-full bg-black border border-white/[0.08] focus:border-[#2997ff] rounded-xl px-3 py-2 text-xs text-white uppercase font-mono focus:outline-none"
           >
         </div>
       </div>
 
       <div class="pt-2">
-        <button onclick="saveBankSettings()" class="w-full py-3 rounded-full bg-[#d82d8b] hover:bg-[#e03b9b] text-white font-semibold text-xs transition shadow-md">
-          Lưu Cấu Hình MoMo
+        <button onclick="saveBankSettings()" class="w-full py-3 rounded-full bg-[#0071e3] hover:bg-[#0077ed] text-white font-semibold text-xs transition shadow-md">
+          Lưu Cấu Hình
         </button>
       </div>
 
@@ -842,7 +835,7 @@
         </a>
       </div>
 
-      <p class="text-[#6e6e73]">Copyright © 2026 MTDES23. Thanh toán độc quyền & an toàn qua Ví MoMo.</p>
+      <p class="text-[#6e6e73]">Copyright © 2026 MTDES23. Cổng thanh toán VietQR & MoMo.</p>
 
     </div>
   </footer>

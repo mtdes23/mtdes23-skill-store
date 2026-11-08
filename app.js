@@ -26,14 +26,35 @@ const STATE = {
     bankName: 'Ví MoMo',
     bin: '971025',
     accountNo: '0336779222',
-    accountName: 'MTDES23',
+    accountName: 'THACH MINH TRI',
+    momoNo: '0336779222',
+    tcbNo: '19035505367013',
     template: 'compact2'
   }
 };
 
-// MoMo Exclusive Payment Gateway
+// Official Supported Payments: MoMo & Techcombank
 const SUPPORTED_BANKS = [
-  { id: 'momo', name: 'Ví MoMo', bin: '971025', logo: 'https://cdn.vietqr.io/img/momo.png' }
+  {
+    id: 'momo',
+    name: 'Ví MoMo',
+    shortName: 'MoMo',
+    accountNo: '0336779222',
+    accountName: 'THACH MINH TRI',
+    bin: '971025',
+    logo: 'https://cdn.vietqr.io/img/momo.png',
+    badge: 'Ví MoMo'
+  },
+  {
+    id: 'TCB',
+    name: 'Techcombank',
+    shortName: 'Techcombank',
+    accountNo: '19035505367013',
+    accountName: 'THACH MINH TRI',
+    bin: '970407',
+    logo: 'https://api.vietqr.io/img/TCB.png',
+    badge: 'Ngân Hàng TCB'
+  }
 ];
 
 // Apple Keynote Style Terminal Presets
@@ -232,18 +253,26 @@ function loadLocalStorage() {
   if (savedBank) {
     try {
       const parsed = JSON.parse(savedBank);
-      if (parsed && parsed.accountNo && parsed.accountNo !== '0987654321') {
-        STATE.bankConfig.accountNo = parsed.accountNo;
+      if (parsed) {
+        if (parsed.bankId === 'TCB' || parsed.bankId === 'momo') {
+          STATE.bankConfig.bankId = parsed.bankId;
+        }
+        if (parsed.momoNo) STATE.bankConfig.momoNo = parsed.momoNo;
+        if (parsed.tcbNo) STATE.bankConfig.tcbNo = parsed.tcbNo;
         if (parsed.accountName) STATE.bankConfig.accountName = parsed.accountName;
       }
     } catch(e){}
   }
-  // Enforce MoMo as the sole payment method
-  STATE.bankConfig.bankId = 'momo';
-  STATE.bankConfig.bankName = 'Ví MoMo';
-  STATE.bankConfig.bin = '971025';
-  if (!STATE.bankConfig.accountNo) STATE.bankConfig.accountNo = '0336779222';
-  if (!STATE.bankConfig.accountName) STATE.bankConfig.accountName = 'MTDES23';
+  // Synchronize payment specifics
+  STATE.bankConfig.accountName = STATE.bankConfig.accountName || 'THACH MINH TRI';
+  STATE.bankConfig.momoNo = STATE.bankConfig.momoNo || '0336779222';
+  STATE.bankConfig.tcbNo = STATE.bankConfig.tcbNo || '19035505367013';
+
+  const currentBank = SUPPORTED_BANKS.find(b => b.id === STATE.bankConfig.bankId) || SUPPORTED_BANKS[0];
+  STATE.bankConfig.bankId = currentBank.id;
+  STATE.bankConfig.bankName = currentBank.name;
+  STATE.bankConfig.bin = currentBank.bin;
+  STATE.bankConfig.accountNo = currentBank.id === 'momo' ? STATE.bankConfig.momoNo : STATE.bankConfig.tcbNo;
   const savedCart = localStorage.getItem('skillvault_cart');
   if (savedCart) {
     try { STATE.cart = JSON.parse(savedCart); } catch(e){}
@@ -1207,23 +1236,46 @@ function renderCheckoutBankSelector() {
   const container = document.getElementById('checkout-bank-selector');
   if (!container) return;
 
-  container.innerHTML = `
-    <div class="col-span-4 flex items-center justify-between p-3 rounded-2xl bg-[#d82d8b]/15 border border-[#d82d8b]/40 text-white shadow-sm">
-      <div class="flex items-center gap-2.5">
-        <img src="https://cdn.vietqr.io/img/momo.png" alt="MoMo" class="w-6 h-6 object-contain rounded-lg bg-white p-0.5">
-        <span class="text-xs font-bold">Ví Điện Tử MoMo (Duy Nhất)</span>
-      </div>
-      <span class="text-[11px] font-mono font-bold text-[#2997ff] bg-black/50 px-2.5 py-0.5 rounded-full border border-white/10">0336779222</span>
-    </div>
-  `;
+  container.innerHTML = SUPPORTED_BANKS.map(b => {
+    const isSelected = b.id === STATE.bankConfig.bankId;
+    const isMoMo = b.id === 'momo';
+    const activeColor = isMoMo ? 'border-[#d82d8b] bg-[#d82d8b]/15 shadow-md shadow-[#d82d8b]/10' : 'border-[#e01a22] bg-[#e01a22]/15 shadow-md shadow-[#e01a22]/10';
+    return `
+      <button 
+        type="button" 
+        onclick="switchCheckoutBank('${b.id}')"
+        class="flex items-center justify-between p-3.5 rounded-2xl border transition-all text-left ${
+          isSelected 
+            ? `${activeColor} ring-1 ${isMoMo ? 'ring-[#d82d8b]' : 'ring-[#e01a22]'}` 
+            : 'bg-black/40 border-white/[0.08] hover:border-white/20'
+        }"
+      >
+        <div class="flex items-center gap-3 truncate">
+          <img src="${b.logo}" alt="${b.name}" class="w-7 h-7 object-contain rounded-xl bg-white p-1 shrink-0 shadow-sm">
+          <div class="truncate">
+            <span class="text-xs font-bold block ${isSelected ? 'text-white' : 'text-[#d2d2d7]'}">${b.name}</span>
+            <span class="text-[11px] font-mono font-semibold block ${isSelected ? (isMoMo ? 'text-[#ff78c4]' : 'text-[#ff5c5c]') : 'text-[#86868b]'}">${b.accountNo}</span>
+          </div>
+        </div>
+        <span class="text-[10px] font-semibold px-2.5 py-1 rounded-full shrink-0 ${
+          isSelected 
+            ? (isMoMo ? 'bg-[#d82d8b] text-white shadow-sm' : 'bg-[#e01a22] text-white shadow-sm') 
+            : 'bg-white/5 text-[#86868b]'
+        }">${isSelected ? '✓ Đang chọn' : 'Chọn'}</span>
+      </button>
+    `;
+  }).join('');
 }
 
 function switchCheckoutBank(bankId) {
-  STATE.bankConfig.bankId = 'momo';
-  STATE.bankConfig.bankName = 'Ví MoMo';
-  STATE.bankConfig.bin = '971025';
-  STATE.bankConfig.accountNo = STATE.bankConfig.accountNo || '0336779222';
+  const bank = SUPPORTED_BANKS.find(b => b.id === bankId) || SUPPORTED_BANKS[0];
+  playSound('click');
+  STATE.bankConfig.bankId = bank.id;
+  STATE.bankConfig.bankName = bank.name;
+  STATE.bankConfig.bin = bank.bin;
+  STATE.bankConfig.accountNo = bank.id === 'momo' ? (STATE.bankConfig.momoNo || bank.accountNo) : (STATE.bankConfig.tcbNo || bank.accountNo);
   saveLocalStorage();
+  renderCheckoutBankSelector();
   updateVietQRDisplay();
 }
 
@@ -1236,17 +1288,28 @@ function updateVietQRDisplay() {
   const accNameEl = document.getElementById('qr-account-name');
   const memoEl = document.getElementById('qr-transfer-memo');
   const qrImgEl = document.getElementById('vietqr-image');
+  const methodLabelEl = document.getElementById('qr-method-label');
 
   const transferMemo = `${order.orderId}`;
-  const accNo = STATE.bankConfig.accountNo || '0336779222';
-  const accName = STATE.bankConfig.accountName || 'MTDES23';
+  const bank = SUPPORTED_BANKS.find(b => b.id === STATE.bankConfig.bankId) || SUPPORTED_BANKS[0];
+  const accNo = bank.id === 'momo' ? (STATE.bankConfig.momoNo || bank.accountNo) : (STATE.bankConfig.tcbNo || bank.accountNo);
+  const accName = STATE.bankConfig.accountName || 'THACH MINH TRI';
 
-  if (bankNameEl) bankNameEl.innerHTML = `<img src="https://cdn.vietqr.io/img/momo.png" alt="MoMo" class="w-3.5 h-3.5 object-contain inline-block mr-1"> Ví Điện Tử MoMo`;
+  if (bankNameEl) {
+    bankNameEl.innerHTML = `
+      <img src="${bank.logo}" alt="${bank.name}" class="w-4 h-4 object-contain rounded inline-block mr-1.5 bg-white p-0.5">
+      <span>${bank.name}</span>
+    `;
+  }
+  if (methodLabelEl) {
+    methodLabelEl.innerText = bank.id === 'momo' ? 'Số điện thoại MoMo:' : 'Số tài khoản Techcombank:';
+  }
   if (accNoEl) accNoEl.innerText = accNo;
   if (accNameEl) accNameEl.innerText = accName;
   if (memoEl) memoEl.innerText = transferMemo;
 
-  const qrUrl = `https://img.vietqr.io/image/971025-${accNo}-${STATE.bankConfig.template}.png?amount=${order.totalAmount}&addInfo=${encodeURIComponent(transferMemo)}&accountName=${encodeURIComponent(accName)}`;
+  // Dynamic VietQR generator
+  const qrUrl = `https://img.vietqr.io/image/${bank.bin}-${accNo}-${STATE.bankConfig.template}.png?amount=${order.totalAmount}&addInfo=${encodeURIComponent(transferMemo)}&accountName=${encodeURIComponent(accName)}`;
 
   if (qrImgEl) {
     qrImgEl.src = qrUrl;
@@ -1329,30 +1392,34 @@ function triggerConfetti() {
 function openBankModal() {
   closeAllModals();
   const modal = document.getElementById('bank-modal');
-  const accNoInput = document.getElementById('cfg-account-no');
+  const momoInput = document.getElementById('cfg-momo-no');
+  const tcbInput = document.getElementById('cfg-tcb-no');
   const accNameInput = document.getElementById('cfg-account-name');
 
-  if (accNoInput) accNoInput.value = STATE.bankConfig.accountNo || '0336779222';
-  if (accNameInput) accNameInput.value = STATE.bankConfig.accountName || 'MTDES23';
+  if (momoInput) momoInput.value = STATE.bankConfig.momoNo || '0336779222';
+  if (tcbInput) tcbInput.value = STATE.bankConfig.tcbNo || '19035505367013';
+  if (accNameInput) accNameInput.value = STATE.bankConfig.accountName || 'THACH MINH TRI';
 
   modal?.classList.remove('hidden');
   lucide.createIcons();
 }
 
 function saveBankSettings() {
-  const accNoInput = document.getElementById('cfg-account-no');
+  const momoInput = document.getElementById('cfg-momo-no');
+  const tcbInput = document.getElementById('cfg-tcb-no');
   const accNameInput = document.getElementById('cfg-account-name');
 
-  STATE.bankConfig.bankId = 'momo';
-  STATE.bankConfig.bankName = 'Ví MoMo';
-  STATE.bankConfig.bin = '971025';
-  STATE.bankConfig.accountNo = (accNoInput && accNoInput.value.trim()) ? accNoInput.value.trim() : '0336779222';
-  STATE.bankConfig.accountName = (accNameInput && accNameInput.value.trim()) ? accNameInput.value.trim().toUpperCase() : 'MTDES23';
+  if (momoInput && momoInput.value.trim()) STATE.bankConfig.momoNo = momoInput.value.trim();
+  if (tcbInput && tcbInput.value.trim()) STATE.bankConfig.tcbNo = tcbInput.value.trim();
+  if (accNameInput && accNameInput.value.trim()) STATE.bankConfig.accountName = accNameInput.value.trim().toUpperCase();
+
+  const currentBank = SUPPORTED_BANKS.find(b => b.id === STATE.bankConfig.bankId) || SUPPORTED_BANKS[0];
+  STATE.bankConfig.accountNo = currentBank.id === 'momo' ? STATE.bankConfig.momoNo : STATE.bankConfig.tcbNo;
 
   saveLocalStorage();
   closeAllModals();
   playSound('chime');
-  showToast('Đã lưu cấu hình Ví MoMo', 'success');
+  showToast('Đã lưu cấu hình MoMo & Techcombank thành công', 'success');
 }
 
 // ==========================================================================

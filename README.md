@@ -1,7 +1,7 @@
 # SKILLVAULT AI — Chợ Kỹ Năng & Giải Pháp Tự Động Hóa Cho AI Agent
 
 > **Hệ sinh thái 2,821+ kỹ năng AI đỉnh cao cho Google Antigravity & Claude Code.**  
-> Giao diện chuẩn Apple.com Design System. Thanh toán độc quyền siêu tốc qua **Ví MoMo: 0336779222**.
+> Giao diện chuẩn Apple.com Design System. Hỗ trợ thanh toán trực tiếp qua **Ví MoMo: 0336779222** & **Techcombank: 19035505367013** (Chủ TK: THACH MINH TRI).
 
 ---
 
@@ -13,11 +13,11 @@
 - **Từng Kỹ Năng Đơn Lẻ (Master Catalog 2,821 Skills)**:
   - Tìm kiếm thời gian thực (Instant Search), lọc theo tags/chuyên mục, popup xem chi tiết và lệnh kích hoạt nhanh `/skill ...`.
 
-### 2. Cổng Thanh Toán Độc Quyền Qua Ví MoMo
-- Sinh mã **MoMo QR** (chuẩn Napas VietQR) tự động theo thời gian thực.
-- Số điện thoại nhận tiền duy nhất: **0336779222** (Chủ ví: MTDES23).
-- Tự động điền số tiền chính xác và nội dung chuyển khoản (ví dụ: `SK8888`).
-- Đồng hồ đếm ngược 15 phút, tính năng sao chép số điện thoại MoMo 1 chạm.
+### 2. Cổng Thanh Toán Quét Mã 1 Chạm (MoMo & Techcombank)
+- **Ví MoMo**: Số điện thoại `0336779222` (Chủ TK: THACH MINH TRI).
+- **Techcombank**: Số tài khoản `19035505367013` (Chủ TK: THACH MINH TRI).
+- Tự động sinh mã **VietQR** độ nét cao theo từng đơn hàng với số tiền chính xác và nội dung chuyển khoản tự động (ví dụ: `SK8888`).
+- Đồng hồ đếm ngược 15 phút, tính năng sao chép số tài khoản / SĐT 1 chạm.
 - Sau khi thanh toán: Mở khóa ngay link tải file .ZIP và lệnh nạp 1-click vào Antigravity.
 
 ---
