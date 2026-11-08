@@ -1,34 +1,24 @@
 # SKILLVAULT AI — Chợ Kỹ Năng & Giải Pháp Tự Động Hóa Cho AI Agent
 
 > **Hệ sinh thái 2,821+ kỹ năng AI đỉnh cao cho Google Antigravity & Claude Code.**  
-> Bán hàng tự động thông qua quét mã VietQR chuẩn ngân hàng Napas, phân loại theo 9 gói dự án turnkey, 8 chuyên mục và hơn 2,800 kỹ năng thực chiến.
+> Giao diện chuẩn Apple.com Design System. Thanh toán độc quyền siêu tốc qua **Ví MoMo: 0336779222**.
 
 ---
 
 ## 🌟 Tính Năng Nổi Bật
 
-### 1. Phân Loại 3 Tầng Thông Minh
-- **Tầng 1: Theo Dự Án (9 Gói Turnkey Solutions)**:
-  - 🏎️ **Kênh Siêu Xe Chuẩn Điện Ảnh X SPEED VN** (F40 & R34 Formula, kịch bản 6 hồi, phụ đề karaoke, tự đăng TikTok).
-  - ⚽ **Kênh Thể Thao Triệu View Ngôi Đền Huyền Thoại** (Breaking Plate Navy, cúp 3x3, âm thanh BLV thể thao -14 LUFS).
-  - 🎬 **Tự Động Hóa Dựng Video Remotion & Talking-Head** (Cắt ậm ừ/lặng frame-exact, dời mốc từ, hiện logo hãng).
-  - ⚡ **Kho 169 Hiệu Ứng MRT Keyword (Phúc Anh MRT)** (169 hiệu ứng video, 62 code chạy ngay: text-behind, chart, progress-bar).
-  - 🎙️ **Studio Giọng Đọc AI VieNeu-TTS & Voice Clone** (48kHz Ultra-HD, 25 giọng 3 miền, clone giọng 3s, cảm xúc [cười][thở dài]).
-  - 📰 **Báo Chí & Điểm Tin Mạng Xã Hội (News Digest)** (Thẻ ảnh 1080x1080 8 chủ đề, ruy băng 45°, chống rớt chữ).
-  - 🤖 **Siêu Cơ Quan Đa Tác Tử Agency Agents** (268 chuyên gia AI thuộc 18 phòng ban + NEXUS 7 pha).
-  - 🧊 **Vũ Trụ 3D AI & Kỹ Xảo Điện Ảnh** (Hyper3D Rodin Gen-2.5, Meshy 3D, cẩm nang Blender Pro, Kling, PixVerse).
-  - 👑 **Master Vault VIP** (Toàn bộ 2,821 kỹ năng vĩnh viễn, 585 âm thanh bản quyền).
-- **Tầng 2: Theo Từng Mục (8 Chuyên Mục)**:
+### 1. Danh Mục Chuẩn Hóa
+- **Theo Chuyên Mục (8 Chuyên Mục Lớn)**:
   - Video Media · Voice AI · 3D VFX · UI/UX Motion · Agents · Security · Development · Marketing.
-- **Tầng 3: Từng Kỹ Năng Đơn Lẻ (Master Catalog 2,821 Skills)**:
-  - Tìm kiếm thời gian thực (Instant Search), lọc theo tags, popup xem chi tiết và lệnh kích hoạt nhanh `/skill ...`.
+- **Từng Kỹ Năng Đơn Lẻ (Master Catalog 2,821 Skills)**:
+  - Tìm kiếm thời gian thực (Instant Search), lọc theo tags/chuyên mục, popup xem chi tiết và lệnh kích hoạt nhanh `/skill ...`.
 
-### 2. Cổng Thanh Toán Quét Mã VietQR Tự Động
-- Sinh mã **VietQR** chuẩn Napas thời gian thực cho mọi ngân hàng Việt Nam (MB Bank, Vietcombank, Techcombank, VPBank, ACB, BIDV...).
-- Tự động điền đúng Số tài khoản, Tên người thụ hưởng, Số tiền và Nội dung chuyển khoản mã hóa (ví dụ: `SK8888`).
-- Đồng hồ đếm ngược 15 phút, tính năng sao chép nhanh 1 chạm.
+### 2. Cổng Thanh Toán Độc Quyền Qua Ví MoMo
+- Sinh mã **MoMo QR** (chuẩn Napas VietQR) tự động theo thời gian thực.
+- Số điện thoại nhận tiền duy nhất: **0336779222** (Chủ ví: MTDES23).
+- Tự động điền số tiền chính xác và nội dung chuyển khoản (ví dụ: `SK8888`).
+- Đồng hồ đếm ngược 15 phút, tính năng sao chép số điện thoại MoMo 1 chạm.
 - Sau khi thanh toán: Mở khóa ngay link tải file .ZIP và lệnh nạp 1-click vào Antigravity.
-- **Cấu hình ngân hàng cho chủ shop**: Cho phép thay đổi số tài khoản cá nhân trực tiếp trên giao diện website.
 
 ---
 
