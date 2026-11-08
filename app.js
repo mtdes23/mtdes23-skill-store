@@ -4,12 +4,12 @@
 // ==========================================================================
 
 const STATE = {
-  activeTab: 'projects', // 'projects' | 'categories' | 'skills' | 'guide'
-  viewMode: 'grid',      // 'grid' | 'table'
+  activeTab: 'categories', // 'categories' | 'skills' | 'guide'
+  viewMode: 'grid',        // 'grid' | 'table'
   selectedCategory: 'all',
   searchQuery: '',
   curatedOnly: false,
-  sortBy: 'popular',     // 'popular' | 'price-asc' | 'price-desc' | 'rating'
+  sortBy: 'popular',       // 'popular' | 'price-asc' | 'price-desc' | 'rating'
   projects: [],
   categories: [],
   skills: [],
@@ -22,16 +22,18 @@ const STATE = {
   currentOrder: null,
   soundEnabled: true,
   bankConfig: {
-    bankId: 'MB',
-    bankName: 'MB Bank (Quân Đội)',
-    accountNo: '0987654321',
-    accountName: 'NGUYEN VAN A',
+    bankId: 'momo',
+    bankName: 'Ví MoMo',
+    bin: '971025',
+    accountNo: '0336779222',
+    accountName: 'MTDES23',
     template: 'compact2'
   }
 };
 
-// Official VietQR Supported Banks
+// Official VietQR Supported Banks (MoMo is primary)
 const SUPPORTED_BANKS = [
+  { id: 'momo', name: 'Ví MoMo', bin: '971025', logo: 'https://cdn.vietqr.io/img/momo.png' },
   { id: 'MB', name: 'MB Bank', bin: '970422', logo: 'https://api.vietqr.io/img/MB.png' },
   { id: 'VCB', name: 'Vietcombank', bin: '970436', logo: 'https://api.vietqr.io/img/VCB.png' },
   { id: 'TCB', name: 'Techcombank', bin: '970407', logo: 'https://api.vietqr.io/img/TCB.png' },
@@ -236,7 +238,12 @@ document.addEventListener('DOMContentLoaded', async () => {
 function loadLocalStorage() {
   const savedBank = localStorage.getItem('skillvault_bank');
   if (savedBank) {
-    try { STATE.bankConfig = JSON.parse(savedBank); } catch(e){}
+    try {
+      const parsed = JSON.parse(savedBank);
+      if (parsed && parsed.accountNo && parsed.accountNo !== '0987654321') {
+        STATE.bankConfig = parsed;
+      }
+    } catch(e){}
   }
   const savedCart = localStorage.getItem('skillvault_cart');
   if (savedCart) {
@@ -309,8 +316,8 @@ function setupEventListeners() {
     searchInput.addEventListener('input', (e) => {
       STATE.searchQuery = e.target.value.trim().toLowerCase();
       filterSkills();
-      if (STATE.activeTab === 'projects') {
-        renderProjects();
+      if (STATE.searchQuery && STATE.activeTab === 'categories') {
+        setTab('skills');
       } else {
         renderSkills();
       }
@@ -431,6 +438,7 @@ function initTerminalSimulation(presetKey) {
 // Navigation & Filtering
 // ==========================================================================
 function setTab(tab) {
+  if (tab === 'projects') tab = 'categories';
   STATE.activeTab = tab;
   
   document.querySelectorAll('[data-nav-tab]').forEach(btn => {
@@ -442,7 +450,7 @@ function setTab(tab) {
     }
   });
 
-  const views = ['projects-view', 'categories-view', 'skills-view', 'guide-view'];
+  const views = ['categories-view', 'skills-view', 'guide-view'];
   views.forEach(v => {
     const el = document.getElementById(v);
     if (el) el.classList.add('hidden');
@@ -451,11 +459,14 @@ function setTab(tab) {
   const activeViewEl = document.getElementById(`${tab}-view`);
   if (activeViewEl) activeViewEl.classList.remove('hidden');
 
-  if (tab === 'projects') renderProjects();
   if (tab === 'categories') renderCategories();
   if (tab === 'skills') renderSkills();
 
   lucide.createIcons();
+}
+
+function renderApp() {
+  setTab(STATE.activeTab || 'categories');
 }
 
 function filterSkills() {
@@ -1199,14 +1210,19 @@ function renderCheckoutBankSelector() {
 
   container.innerHTML = SUPPORTED_BANKS.map(b => {
     const isSelected = b.id === STATE.bankConfig.bankId;
+    const isMoMo = b.id === 'momo';
     return `
       <button 
         type="button"
         onclick="switchCheckoutBank('${b.id}')"
-        class="flex items-center gap-2 p-2.5 rounded-2xl border transition-all text-left ${isSelected ? 'bg-white/10 border-white text-white shadow-sm' : 'bg-black/30 border-white/[0.06] text-[#86868b] hover:text-white'}"
+        class="flex items-center gap-2 p-2.5 rounded-2xl border transition-all text-left ${
+          isSelected 
+            ? (isMoMo ? 'bg-[#d82d8b]/20 border-[#d82d8b] text-white shadow-md' : 'bg-white/10 border-white text-white shadow-sm') 
+            : 'bg-black/30 border-white/[0.06] text-[#86868b] hover:text-white'
+        }"
       >
         <img src="${b.logo}" alt="${b.name}" class="w-6 h-6 object-contain rounded-md bg-white p-0.5 shrink-0" onerror="this.style.display='none'">
-        <span class="text-xs font-semibold truncate">${b.id}</span>
+        <span class="text-xs font-semibold truncate">${b.id === 'momo' ? 'MoMo' : b.id}</span>
       </button>
     `;
   }).join('');
@@ -1218,6 +1234,10 @@ function switchCheckoutBank(bankId) {
   playSound('click');
   STATE.bankConfig.bankId = bank.id;
   STATE.bankConfig.bankName = bank.name;
+  if (bank.bin) STATE.bankConfig.bin = bank.bin;
+  if (bankId === 'momo' && !STATE.bankConfig.accountNo) {
+    STATE.bankConfig.accountNo = '0336779222';
+  }
   saveLocalStorage();
   renderCheckoutBankSelector();
   updateVietQRDisplay();
@@ -1235,12 +1255,16 @@ function updateVietQRDisplay() {
 
   const transferMemo = `${order.orderId}`;
 
+  const bankObj = SUPPORTED_BANKS.find(b => b.id === STATE.bankConfig.bankId);
+  const bankCode = bankObj ? (bankObj.bin || bankObj.id) : STATE.bankConfig.bankId;
+  const accNo = (STATE.bankConfig.bankId === 'momo' && !STATE.bankConfig.accountNo) ? '0336779222' : STATE.bankConfig.accountNo;
+
   if (bankNameEl) bankNameEl.innerText = STATE.bankConfig.bankName;
-  if (accNoEl) accNoEl.innerText = STATE.bankConfig.accountNo;
+  if (accNoEl) accNoEl.innerText = accNo;
   if (accNameEl) accNameEl.innerText = STATE.bankConfig.accountName;
   if (memoEl) memoEl.innerText = transferMemo;
 
-  const qrUrl = `https://img.vietqr.io/image/${STATE.bankConfig.bankId}-${STATE.bankConfig.accountNo}-${STATE.bankConfig.template}.png?amount=${order.totalAmount}&addInfo=${encodeURIComponent(transferMemo)}&accountName=${encodeURIComponent(STATE.bankConfig.accountName)}`;
+  const qrUrl = `https://img.vietqr.io/image/${bankCode}-${accNo}-${STATE.bankConfig.template}.png?amount=${order.totalAmount}&addInfo=${encodeURIComponent(transferMemo)}&accountName=${encodeURIComponent(STATE.bankConfig.accountName)}`;
 
   if (qrImgEl) {
     qrImgEl.src = qrUrl;

@@ -98,7 +98,7 @@
   <!-- TOP APPLE SUB-NAV / RIBBON -->
   <div class="bg-[#1d1d1f] text-[#86868b] text-[12px] py-2.5 px-4 text-center font-normal flex items-center justify-center gap-2 border-b border-white/[0.08]">
     <span>Trải nghiệm 2,821 kỹ năng AI đẳng cấp cho Antigravity & Claude Code.</span>
-    <a href="#projects-view" onclick="setTab('projects')" class="text-[#2997ff] hover:underline flex items-center gap-0.5">
+    <a href="#skills-view" onclick="setTab('skills')" class="text-[#2997ff] hover:underline flex items-center gap-0.5">
       Khám phá ngay <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
     </a>
   </div>
@@ -108,16 +108,15 @@
     <div class="max-w-[1024px] mx-auto px-4 h-14 flex items-center justify-between gap-4">
       
       <!-- Apple Logo / Brand -->
-      <div class="flex items-center gap-2 cursor-pointer select-none" onclick="setTab('projects')">
+      <div class="flex items-center gap-2 cursor-pointer select-none" onclick="setTab('categories')">
         <i data-lucide="cpu" class="w-5 h-5 text-white"></i>
         <span class="text-sm font-semibold tracking-tight text-white font-mono">SkillVault</span>
       </div>
 
       <!-- Center Minimalist Nav Links -->
       <nav class="hidden md:flex items-center gap-7 text-xs font-normal text-[#d2d2d7]">
-        <button data-nav-tab="projects" class="text-white hover:text-white transition font-medium">Theo Dự Án</button>
-        <button data-nav-tab="categories" class="hover:text-white transition text-[#86868b]">Chuyên Mục</button>
-        <button data-nav-tab="skills" class="hover:text-white transition text-[#86868b]">Kỹ Năng Lẻ</button>
+        <button data-nav-tab="categories" class="text-white hover:text-white transition font-medium">Chuyên Mục</button>
+        <button data-nav-tab="skills" class="hover:text-white transition text-[#86868b]">Kho Kỹ Năng (2,821)</button>
         <button data-nav-tab="guide" class="hover:text-white transition text-[#86868b]">Cài Đặt</button>
       </nav>
 
@@ -157,8 +156,7 @@
 
     <!-- Mobile Sub-Navigation -->
     <div class="md:hidden flex items-center justify-around border-t border-white/[0.08] py-2 px-3 bg-black text-xs text-[#86868b]">
-      <button data-nav-tab="projects" class="hover:text-white">Dự Án</button>
-      <button data-nav-tab="categories" class="hover:text-white">Chuyên Mục</button>
+      <button data-nav-tab="categories" class="text-white">Chuyên Mục</button>
       <button data-nav-tab="skills" class="hover:text-white">Kỹ Năng</button>
       <button data-nav-tab="guide" class="hover:text-white">Cài Đặt</button>
     </div>
@@ -186,11 +184,11 @@
 
       <!-- Apple Action CTAs -->
       <div class="flex items-center justify-center gap-4 mb-14">
-        <a href="#projects-view" onclick="setTab('projects')" class="apple-btn px-6 py-2.5 rounded-full bg-[#0071e3] hover:bg-[#0077ed] text-white text-sm font-medium transition shadow-sm">
-          Khám phá các gói dự án
+        <a href="#skills-view" onclick="setTab('skills')" class="apple-btn px-6 py-2.5 rounded-full bg-[#0071e3] hover:bg-[#0077ed] text-white text-sm font-medium transition shadow-sm">
+          Khám phá 2,821 kỹ năng
         </a>
-        <a href="#guide-view" onclick="setTab('guide')" class="text-[#2997ff] hover:underline flex items-center gap-1 text-sm font-medium">
-          Tìm hiểu cách cài đặt <i data-lucide="chevron-right" class="w-4 h-4"></i>
+        <a href="#categories-view" onclick="setTab('categories')" class="text-[#2997ff] hover:underline flex items-center gap-1 text-sm font-medium">
+          Xem 8 chuyên mục <i data-lucide="chevron-right" class="w-4 h-4"></i>
         </a>
       </div>
 
@@ -243,16 +241,16 @@
           <p class="text-xs text-[#86868b] mt-1">Kỹ Năng Đã Xác Thực</p>
         </div>
         <div>
-          <span class="text-3xl sm:text-4xl font-bold text-white tracking-tight font-mono">9 Gói</span>
-          <p class="text-xs text-[#86868b] mt-1">Dự Án Trọn Gói</p>
+          <span class="text-3xl sm:text-4xl font-bold text-white tracking-tight font-mono">8 Mục</span>
+          <p class="text-xs text-[#86868b] mt-1">Chuyên Ngành Toàn Diện</p>
         </div>
         <div>
           <span class="text-3xl sm:text-4xl font-bold text-white tracking-tight font-mono">585</span>
           <p class="text-xs text-[#86868b] mt-1">SFX & BGM Bản Quyền 5★</p>
         </div>
         <div>
-          <span class="text-3xl sm:text-4xl font-bold text-[#2997ff] tracking-tight font-mono">VietQR</span>
-          <p class="text-xs text-[#86868b] mt-1">Thanh Toán 1 Chạm</p>
+          <span class="text-3xl sm:text-4xl font-bold text-[#d82d8b] tracking-tight font-mono">MoMo</span>
+          <p class="text-xs text-[#86868b] mt-1">0336779222 (1 Chạm)</p>
         </div>
       </div>
 
@@ -289,17 +287,17 @@
   <main class="max-w-[1024px] mx-auto px-4 sm:px-6 py-12">
     
     <!-- ============================================================== -->
-    <!-- VIEW 1: PROJECTS (APPLE BENTO GRID)                            -->
+    <!-- VIEW 1: CATEGORIES                                             -->
     <!-- ============================================================== -->
-    <section id="projects-view" class="space-y-10">
+    <section id="categories-view" class="space-y-10">
       
       <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-white/[0.08] pb-6">
         <div>
-          <span class="text-xs font-semibold uppercase tracking-[0.08em] text-[#86868b]">Turnkey Solutions</span>
+          <span class="text-xs font-semibold uppercase tracking-[0.08em] text-[#86868b]">Taxonomy</span>
           <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight mt-1">
-            Gói Giải Pháp Theo Dự Án
+            Phân Loại Theo Chuyên Mục
           </h2>
-          <p class="text-sm text-[#86868b] mt-1 font-normal">Kịch bản 6 hồi điện ảnh, âm thanh bản quyền và tự động hóa sản xuất ngay lập tức.</p>
+          <p class="text-sm text-[#86868b] mt-1 font-normal">8 lĩnh vực chuyên môn từ Media, Âm thanh đến An ninh mạng và Đám mây.</p>
         </div>
 
         <div class="flex items-center gap-2">
@@ -312,26 +310,6 @@
         </div>
       </div>
 
-      <!-- Bento Grid Cards -->
-      <div id="projects-grid" class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        <!-- Rendered dynamically by app.js -->
-      </div>
-
-    </section>
-
-    <!-- ============================================================== -->
-    <!-- VIEW 2: CATEGORIES                                             -->
-    <!-- ============================================================== -->
-    <section id="categories-view" class="hidden space-y-10">
-      
-      <div class="border-b border-white/[0.08] pb-6">
-        <span class="text-xs font-semibold uppercase tracking-[0.08em] text-[#86868b]">Taxonomy</span>
-        <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight mt-1">
-          Phân Loại Theo Chuyên Mục
-        </h2>
-        <p class="text-sm text-[#86868b] mt-1 font-normal">8 lĩnh vực chuyên môn từ Media, Âm thanh đến An ninh mạng và Đám mây.</p>
-      </div>
-
       <div id="categories-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
         <!-- Rendered dynamically by app.js -->
       </div>
@@ -339,7 +317,7 @@
     </section>
 
     <!-- ============================================================== -->
-    <!-- VIEW 3: INDIVIDUAL SKILLS (MASTER CATALOG)                     -->
+    <!-- VIEW 2: INDIVIDUAL SKILLS (MASTER CATALOG)                     -->
     <!-- ============================================================== -->
     <section id="skills-view" class="hidden space-y-8">
       
@@ -503,8 +481,8 @@
     <div id="cart-empty-view" class="p-8 text-center text-[#86868b] space-y-3 my-auto hidden">
       <i data-lucide="shopping-bag" class="w-12 h-12 mx-auto text-[#515154]"></i>
       <p class="text-sm font-medium">Túi hàng của bạn đang trống.</p>
-      <button onclick="closeCartDrawer(); setTab('projects');" class="px-5 py-2.5 rounded-full bg-[#0071e3] text-white font-medium text-xs hover:bg-[#0077ed] transition">
-        Khám phá các gói dự án
+      <button onclick="closeCartDrawer(); setTab('skills');" class="px-5 py-2.5 rounded-full bg-[#0071e3] text-white font-medium text-xs hover:bg-[#0077ed] transition">
+        Khám phá kho 2,821 kỹ năng
       </button>
     </div>
 
@@ -628,9 +606,26 @@
         <p class="text-xs text-[#86868b]">Mã đơn hàng: <span id="checkout-order-id" class="text-white font-mono font-bold">#SK8888</span></p>
       </div>
 
+      <!-- MoMo Special Banner -->
+      <div class="flex items-center justify-between bg-gradient-to-r from-[#a50064]/20 to-[#d82d8b]/10 border border-[#d82d8b]/30 rounded-2xl p-3.5">
+        <div class="flex items-center gap-3">
+          <img src="https://cdn.vietqr.io/img/momo.png" alt="MoMo" class="w-8 h-8 rounded-xl object-contain bg-white p-1 shrink-0 shadow-sm">
+          <div>
+            <div class="flex items-center gap-1.5">
+              <span class="text-xs font-bold text-white">Ví MoMo Chính Thức</span>
+              <span class="text-[9px] font-semibold uppercase bg-[#d82d8b] text-white px-1.5 py-0.2 rounded-full">Khuyên dùng</span>
+            </div>
+            <p class="text-[11px] text-[#d2d2d7] font-mono">SĐT: <strong>0336779222</strong></p>
+          </div>
+        </div>
+        <button onclick="copyToClipboard('0336779222')" class="px-3 py-1.5 rounded-full bg-[#d82d8b] hover:bg-[#e03b9b] text-white text-[11px] font-semibold transition flex items-center gap-1 shadow-sm shrink-0">
+          <i data-lucide="copy" class="w-3 h-3"></i> Chép SĐT MoMo
+        </button>
+      </div>
+
       <!-- Bank Selector Grid -->
       <div>
-        <label class="text-[11px] font-semibold text-[#86868b] uppercase tracking-wider block mb-2">Chọn ngân hàng chuyển tiền:</label>
+        <label class="text-[11px] font-semibold text-[#86868b] uppercase tracking-wider block mb-2">Chọn phương thức thanh toán / ngân hàng:</label>
         <div id="checkout-bank-selector" class="grid grid-cols-4 gap-2">
           <!-- Rendered dynamically -->
         </div>
@@ -769,7 +764,7 @@
         </div>
       </div>
 
-      <button onclick="closeAllModals(); setTab('projects');" class="w-full py-3 rounded-full bg-white/10 hover:bg-white/20 text-white text-xs font-semibold transition">
+      <button onclick="closeAllModals(); setTab('skills');" class="w-full py-3 rounded-full bg-white/10 hover:bg-white/20 text-white text-xs font-semibold transition">
         Tiếp tục khám phá
       </button>
 
@@ -802,11 +797,11 @@
         </div>
 
         <div>
-          <label class="text-xs font-semibold text-[#86868b] block mb-1">Số tài khoản:</label>
+          <label class="text-xs font-semibold text-[#86868b] block mb-1">Số tài khoản / Số điện thoại MoMo:</label>
           <input 
             type="text" 
             id="cfg-account-no" 
-            placeholder="Ví dụ: 0987654321" 
+            placeholder="0336779222" 
             class="w-full bg-black border border-white/[0.08] focus:border-[#2997ff] rounded-xl px-3 py-2 text-xs text-white font-mono focus:outline-none"
           >
         </div>
@@ -816,7 +811,7 @@
           <input 
             type="text" 
             id="cfg-account-name" 
-            placeholder="Ví dụ: NGUYEN VAN A" 
+            placeholder="MTDES23" 
             class="w-full bg-black border border-white/[0.08] focus:border-[#2997ff] rounded-xl px-3 py-2 text-xs text-white uppercase font-mono focus:outline-none"
           >
         </div>
@@ -842,10 +837,12 @@
       </div>
 
       <div class="flex flex-wrap items-center gap-6 text-[#86868b]">
-        <a href="#projects-view" onclick="setTab('projects')" class="hover:text-white transition">Theo Dự Án</a>
         <a href="#categories-view" onclick="setTab('categories')" class="hover:text-white transition">Chuyên Mục</a>
-        <a href="#skills-view" onclick="setTab('skills')" class="hover:text-white transition">2,821 Kỹ Năng</a>
+        <a href="#skills-view" onclick="setTab('skills')" class="hover:text-white transition">Kho 2,821 Kỹ Năng</a>
         <a href="#guide-view" onclick="setTab('guide')" class="hover:text-white transition">Cài Đặt</a>
+        <a href="https://github.com/mtdes23/mtdes23-skill-store" target="_blank" class="hover:text-white transition flex items-center gap-1">
+          GitHub <i data-lucide="external-link" class="w-3 h-3"></i>
+        </a>
       </div>
 
       <p class="text-[#6e6e73]">Copyright © 2026 MTDES23. Cổng thanh toán VietQR chuẩn Napas.</p>
